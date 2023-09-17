@@ -10,5 +10,3 @@ TextEditingController deleteFreezer22Color2Quantaty = TextEditingController();
 // ______________________________________________________________________
 
 // _______________  Specific for Deep Toshiba 18 ______________
-
-

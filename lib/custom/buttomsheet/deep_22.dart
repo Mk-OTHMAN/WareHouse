@@ -14,21 +14,22 @@ class DeepF22 extends StatefulWidget {
       deleteColor2;
   const DeepF22(
       //  ==============> this required variables un neccesary
-      {super.key,
-      required this.addQuantaty,
-      required this.addColor1,
-      required this.addColor2,
-      required this.deleteQuantaty,
-      required this.deleteColor1,
-      required this.deleteColor2});
-
+      {
+    super.key,
+    required this.addQuantaty,
+    required this.addColor1,
+    required this.addColor2,
+    required this.deleteQuantaty,
+    required this.deleteColor1,
+    required this.deleteColor2,
+  });
   @override
   State<DeepF22> createState() => _DeepF22State();
 }
 
 class _DeepF22State extends State<DeepF22> {
   Box data = Hive.box('data');
-  int valueAddQyantatyFreezer22 = 0;
+  dynamic valueAddQyantatyFreezer22 = 0;
   int valueAddColor1Freezer22 = 0;
   int valueAddColor2Freezer22 = 0;
   int valueDeleteQuantatyFreezer22 = 0;
@@ -45,14 +46,97 @@ class _DeepF22State extends State<DeepF22> {
     }
   }
 
+  //! ===================  1st function for test ===============================
+  void doneGreen() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: const Center(
+              child: Text(
+                'Done',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+            ),
+            content: const Text('  all proccess complete  . . .  !'),
+            actions: [
+              Center(
+                child: SizedBox(
+                  width: 400,
+                  height: 200,
+                  child: Lottie.asset('Assets/lottie/DoneGreen.json'),
+                ),
+              ),
+            ],
+          );
+        });
+  }
+
+  //!============================== 2nd function test =======================
+  void errorDialog() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: const Center(
+              child: Text(
+                'WRONG',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+            ),
+            content: const Text('         Please Add Quantaty And Color ... !'),
+            actions: [
+              SizedBox(
+                width: 400,
+                height: 200,
+                child: Lottie.asset('Assets/lottie/Error.json'),
+              ),
+            ],
+          );
+        });
+  }
+
+  //!       ===================== 3rd function for test ===================
+  void robotError() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: const Center(
+              child: Text(
+                'WRONG',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+            ),
+            content: const Text(
+                '      not found number of total quantaty and color ... !'),
+            actions: [
+              Center(
+                child: SizedBox(
+                  width: 400,
+                  height: 200,
+                  child: Lottie.asset('Assets/lottie/Robot.json'),
+                ),
+              ),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
-    // if (valueDeleteColor1Freezer22 == 0) {
-    //   valueDeleteColor1Freezer22 = data.get('deletecolor1freezer22');
-    // }
-    // if (valueDeleteColor2Freezer22 == 0) {
-    //   valueDeleteColor2Freezer22 = data.get('deletecolor2freezer22');
-    // }
+    if (data.get('freezer22Quantaty') == null) {
+      data.put('freezer22Quantaty', 0);
+    }
     return Row(
       children: [
         Expanded(
@@ -228,31 +312,7 @@ class _DeepF22State extends State<DeepF22> {
                         if (freezer22Quntaty.text.isEmpty &&
                             frezzer22Color1Quantaty.text.isEmpty &&
                             freezer22Color2Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'WRONG',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '         Please Add Quantaty And Color ... !'),
-                                  actions: [
-                                    SizedBox(
-                                      width: 400,
-                                      height: 200,
-                                      child: Lottie.asset(
-                                          'Assets/lottie/Error.json'),
-                                    ),
-                                  ],
-                                );
-                              });
+                          errorDialog();
                           //_________ case add at one time 3*1 _____________
                         } else if (freezer22Quntaty.text.isNotEmpty &&
                             frezzer22Color1Quantaty.text.isNotEmpty &&
@@ -287,33 +347,7 @@ class _DeepF22State extends State<DeepF22> {
                                 'freezer22color2', valueAddColor2Freezer22);
                           }
 
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'Done',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '         Add Proccess Sucsses . . .  !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/DoneGreen.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          doneGreen();
                           freezer22Quntaty.clear();
                           frezzer22Color1Quantaty.clear();
                           freezer22Color2Quantaty.clear();
@@ -321,124 +355,24 @@ class _DeepF22State extends State<DeepF22> {
                         // ________ Check if user write in Quantaty Only ________ //
                         else if (frezzer22Color1Quantaty.text.isEmpty &&
                             freezer22Color2Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                    title: const Center(
-                                      child: Text(
-                                        'Need To Color !',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                    content: const Text(
-                                        '           You must be add at least one color ... !'),
-                                    actions: [
-                                      Center(
-                                        child: SizedBox(
-                                          width: 400,
-                                          height: 200,
-                                          child: Lottie.asset(
-                                              'Assets/lottie/Error.json'),
-                                        ),
-                                      )
-                                    ]);
-                              });
+                          errorDialog();
                           freezer22Quntaty.clear();
                         }
                         // ________ Check if user write in Color 1 Only _______ //
                         else if (freezer22Quntaty.text.isEmpty &&
                             freezer22Color2Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                    title: const Center(
-                                      child: Text(
-                                        'Where Total Quantaty !',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                    content: const Text(
-                                        '           You must be add total quantaty ... !'),
-                                    actions: [
-                                      Center(
-                                        child: SizedBox(
-                                          width: 400,
-                                          height: 200,
-                                          child: Lottie.asset(
-                                              'Assets/lottie/Error.json'),
-                                        ),
-                                      )
-                                    ]);
-                              });
+                          errorDialog();
                           frezzer22Color1Quantaty.clear();
                         }
                         // ________ check if user write in color 2 only _________ //
                         else if (freezer22Quntaty.text.isEmpty &&
                             frezzer22Color1Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                    title: const Center(
-                                      child: Text(
-                                        'Where Total Quantaty !',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                    content: const Text(
-                                        '           You must be add total quantaty ... !'),
-                                    actions: [
-                                      Center(
-                                        child: SizedBox(
-                                          width: 400,
-                                          height: 200,
-                                          child: Lottie.asset(
-                                              'Assets/lottie/Error.json'),
-                                        ),
-                                      )
-                                    ]);
-                              });
+                          errorDialog();
                           freezer22Color2Quantaty.clear();
                         }
                         // _______ check if user write on Color 1 and Color 2 only ______ //
                         else if (freezer22Quntaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                    title: const Center(
-                                      child: Text(
-                                        'Where Total Quantaty !',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                    content: const Text(
-                                        '           You must be add total quantaty ... !'),
-                                    actions: [
-                                      Center(
-                                        child: SizedBox(
-                                          width: 400,
-                                          height: 200,
-                                          child: Lottie.asset(
-                                              'Assets/lottie/Error.json'),
-                                        ),
-                                      )
-                                    ]);
-                              });
+                          errorDialog();
                           frezzer22Color1Quantaty.clear();
                           freezer22Color2Quantaty.clear();
                         }
@@ -447,6 +381,9 @@ class _DeepF22State extends State<DeepF22> {
                           int addQuntatyFreezer22 =
                               int.parse(freezer22Quntaty.text);
                           if (valueAddQyantatyFreezer22 == 0) {
+                            if (data.get('freezer22Qantaty') == null) {
+                              data.put('freezer22Qantaty', 0);
+                            }
                             valueAddQyantatyFreezer22 =
                                 data.get('freezer22Quantaty');
                           }
@@ -456,6 +393,9 @@ class _DeepF22State extends State<DeepF22> {
                           int addColor1Freezer22 =
                               int.parse(frezzer22Color1Quantaty.text);
                           if (valueAddColor1Freezer22 == 0) {
+                            if (data.get('freezer22color1') == null) {
+                              data.put('freezer22color1', 0);
+                            }
                             valueAddColor1Freezer22 =
                                 data.get('freezer22color1');
                           }
@@ -464,33 +404,7 @@ class _DeepF22State extends State<DeepF22> {
                           freezer22Quntaty.clear();
                           frezzer22Color1Quantaty.clear();
                           Navigator.pop(context);
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'Done',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '         Add Proccess Sucsses . . .  !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/DoneGreen.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          doneGreen();
                         }
                         // _________ Add Proccess for All Quantaty & Color 2 Proccess ________ //
                         else {
@@ -506,6 +420,9 @@ class _DeepF22State extends State<DeepF22> {
                           int addColor2Freezer22 =
                               int.parse(freezer22Color2Quantaty.text);
                           if (valueAddColor2Freezer22 == 0) {
+                            if (data.get('freezer22color2') == null) {
+                              data.put('freezer22color2', 0);
+                            }
                             valueAddColor2Freezer22 =
                                 data.get('freezer22color2');
                           }
@@ -514,33 +431,7 @@ class _DeepF22State extends State<DeepF22> {
                           freezer22Quntaty.clear();
                           freezer22Color2Quantaty.clear();
                           Navigator.pop(context);
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'Done',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '         Add Proccess Sucsses . . .  !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/DoneGreen.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          doneGreen();
                         }
                       });
                     },
@@ -696,33 +587,7 @@ class _DeepF22State extends State<DeepF22> {
                         if (deleteFreezer22Quantaty.text.isEmpty &&
                             deleteFreezer22Color1Quntaty.text.isEmpty &&
                             deleteFreezer22Color2Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'WRONG',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '      not found number of total quantaty and color ... !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/Robot.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          robotError();
                         }
                         // __________________  case delete at one time 3*1 _________
                         else if (deleteFreezer22Quantaty.text.isNotEmpty &&
@@ -740,33 +605,7 @@ class _DeepF22State extends State<DeepF22> {
                                   data.get('freezer22color1') >= 0 ||
                               deletecolor2 > data.get('freezer22color2') &&
                                   data.get('freezer22color2') >= 0) {
-                            showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    title: const Center(
-                                      child: Text(
-                                        'WRONG',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                    content: const Text(
-                                        '      please Check all Quantaty ... !'),
-                                    actions: [
-                                      Center(
-                                        child: SizedBox(
-                                          width: 400,
-                                          height: 200,
-                                          child: Lottie.asset(
-                                              'Assets/lottie/Robot.json'),
-                                        ),
-                                      ),
-                                    ],
-                                  );
-                                });
+                            robotError();
                             deleteFreezer22Quantaty.clear();
                             deleteFreezer22Color1Quntaty.clear();
                             deleteFreezer22Color2Quantaty.clear();
@@ -783,33 +622,8 @@ class _DeepF22State extends State<DeepF22> {
                                 data.get('freezer22color2') - deletecolor2;
                             data.put(
                                 'freezer22color2', valueDeleteColor2Freezer22);
-                            showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    title: const Center(
-                                      child: Text(
-                                        'Done',
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                    content: const Text(
-                                        '  all proccess complete  . . .  !'),
-                                    actions: [
-                                      Center(
-                                        child: SizedBox(
-                                          width: 400,
-                                          height: 200,
-                                          child: Lottie.asset(
-                                              'Assets/lottie/DoneGreen.json'),
-                                        ),
-                                      ),
-                                    ],
-                                  );
-                                });
+
+                            doneGreen();
                             deleteFreezer22Quantaty.clear();
                             deleteFreezer22Color1Quntaty.clear();
                             deleteFreezer22Color2Quantaty.clear();
@@ -818,128 +632,24 @@ class _DeepF22State extends State<DeepF22> {
                         // _______ chek if recived from user Quantaty only ________ //
                         else if (deleteFreezer22Color1Quntaty.text.isEmpty &&
                             deleteFreezer22Color2Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'WRONG',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '      please Enter Quantaty of Color ... !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/Robot.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          robotError();
                           deleteFreezer22Quantaty.clear();
                         }
                         // __________ check if recived from user color 1 only ________ //
                         else if (deleteFreezer22Quantaty.text.isEmpty &&
                             deleteFreezer22Color2Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'WRONG',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '      not found number of total quantaty pleade Check Again ... !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/Robot.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          robotError();
                           deleteFreezer22Color1Quntaty.clear();
                         }
                         // ________ chek if recived from user color 2 only _________ //
                         else if (deleteFreezer22Quantaty.text.isEmpty &&
                             deleteFreezer22Color1Quntaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'WRONG',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '      not found number of total quantaty pleade Check Again .. !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/Robot.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          robotError();
                           deleteFreezer22Color2Quantaty.clear();
                         }
                         // _____________ Check if user write input in color 1 and color 2 only _______ //
                         else if (deleteFreezer22Quantaty.text.isEmpty) {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: const Center(
-                                    child: Text(
-                                      'WRONG',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                  content: const Text(
-                                      '      Please Check Total Quantaty ... !'),
-                                  actions: [
-                                    Center(
-                                      child: SizedBox(
-                                        width: 400,
-                                        height: 200,
-                                        child: Lottie.asset(
-                                            'Assets/lottie/Robot.json'),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              });
+                          robotError();
                           deleteFreezer22Color1Quntaty.clear();
                           deleteFreezer22Color2Quantaty.clear();
                         }
@@ -951,33 +661,7 @@ class _DeepF22State extends State<DeepF22> {
                                 int.parse(deleteFreezer22Quantaty.text);
                             if (deletequantaty >
                                 data.get('freezer22Quantaty')) {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: const Center(
-                                        child: Text(
-                                          'WRONG',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black),
-                                        ),
-                                      ),
-                                      content: const Text(
-                                          '      Please Check Total and Color Quantaty .. !'),
-                                      actions: [
-                                        Center(
-                                          child: SizedBox(
-                                            width: 400,
-                                            height: 200,
-                                            child: Lottie.asset(
-                                                'Assets/lottie/Robot.json'),
-                                          ),
-                                        ),
-                                      ],
-                                    );
-                                  });
+                              robotError();
                               deleteFreezer22Quantaty.clear();
                               deleteFreezer22Color1Quntaty.clear();
                             }
@@ -989,33 +673,7 @@ class _DeepF22State extends State<DeepF22> {
                                 int.parse(deleteFreezer22Color1Quntaty.text);
                             if (deletecolor1 > data.get('freezer22color1') &&
                                 data.get('freezer22color1') > 0) {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: const Center(
-                                        child: Text(
-                                          'WRONG',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black),
-                                        ),
-                                      ),
-                                      content: const Text(
-                                          'Total Quantaty Equale Zero Or Given Number Gratter than current Quantaty .. !'),
-                                      actions: [
-                                        Center(
-                                          child: SizedBox(
-                                            width: 400,
-                                            height: 200,
-                                            child: Lottie.asset(
-                                                'Assets/lottie/Robot.json'),
-                                          ),
-                                        ),
-                                      ],
-                                    );
-                                  });
+                              robotError();
                             }
                             deleteFreezer22Color1Quntaty.clear();
                           }
@@ -1026,33 +684,7 @@ class _DeepF22State extends State<DeepF22> {
                                 int.parse(deleteFreezer22Color2Quantaty.text);
                             if (deletecolor2 > data.get('freezer22color2') &&
                                 data.get('freezer22color2') > 0) {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: const Center(
-                                        child: Text(
-                                          'WRONG',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black),
-                                        ),
-                                      ),
-                                      content: const Text(
-                                          'Total Quantaty Equale Zero Or Given Number Gratter than current Quantaty .. !'),
-                                      actions: [
-                                        Center(
-                                          child: SizedBox(
-                                            width: 400,
-                                            height: 200,
-                                            child: Lottie.asset(
-                                                'Assets/lottie/Robot.json'),
-                                          ),
-                                        ),
-                                      ],
-                                    );
-                                  });
+                              robotError();
                             }
                           }
                           // ___________ Case Delete From All Qantaty And Color 1 Proccess
@@ -1067,33 +699,7 @@ class _DeepF22State extends State<DeepF22> {
                               if (deletequantaty >
                                       data.get('freezer22Quantaty') ||
                                   deletecolor1 > data.get('freezer22color1')) {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        title: const Center(
-                                          child: Text(
-                                            'WRONG',
-                                            style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black),
-                                          ),
-                                        ),
-                                        content: const Text(
-                                            'Total Quantaty Equale Zero Or Given Number Gratter than current Quantaty .. !'),
-                                        actions: [
-                                          Center(
-                                            child: SizedBox(
-                                              width: 400,
-                                              height: 200,
-                                              child: Lottie.asset(
-                                                  'Assets/lottie/Robot.json'),
-                                            ),
-                                          ),
-                                        ],
-                                      );
-                                    });
+                                robotError();
                                 // deleteFreezer22Quantaty.clear();
                                 // deleteFreezer22Color1Quntaty.clear();
                               } else {
@@ -1116,33 +722,7 @@ class _DeepF22State extends State<DeepF22> {
 
                                 // deleteFreezer22Color1Quntaty.clear();
 
-                                showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        title: const Center(
-                                          child: Text(
-                                            'Done',
-                                            style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black),
-                                          ),
-                                        ),
-                                        content: const Text(
-                                            '  all proccess complete  . . .  !'),
-                                        actions: [
-                                          Center(
-                                            child: SizedBox(
-                                              width: 400,
-                                              height: 200,
-                                              child: Lottie.asset(
-                                                  'Assets/lottie/DoneGreen.json'),
-                                            ),
-                                          ),
-                                        ],
-                                      );
-                                    });
+                                doneGreen();
                               }
                             }
                             deleteFreezer22Quantaty.clear();
@@ -1160,33 +740,7 @@ class _DeepF22State extends State<DeepF22> {
                               if (deletequantaty >
                                       data.get('freezer22Quantaty') ||
                                   deletecolor2 > data.get('freezer22color2')) {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        title: const Center(
-                                          child: Text(
-                                            'WRONG',
-                                            style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black),
-                                          ),
-                                        ),
-                                        content: const Text(
-                                            'Total Quantaty Equale Zero Or Given Number Gratter than current Quantaty .. !'),
-                                        actions: [
-                                          Center(
-                                            child: SizedBox(
-                                              width: 400,
-                                              height: 200,
-                                              child: Lottie.asset(
-                                                  'Assets/lottie/Robot.json'),
-                                            ),
-                                          ),
-                                        ],
-                                      );
-                                    });
+                                robotError();
                                 deleteFreezer22Quantaty.clear();
                                 deleteFreezer22Color2Quantaty.clear();
                               } else {
@@ -1207,33 +761,7 @@ class _DeepF22State extends State<DeepF22> {
                                     valueDeleteColor2Freezer22);
 
                                 deleteFreezer22Color2Quantaty.clear();
-                                showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        title: const Center(
-                                          child: Text(
-                                            'Done',
-                                            style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black),
-                                          ),
-                                        ),
-                                        content: const Text(
-                                            '  all proccess complete  . . .  !'),
-                                        actions: [
-                                          Center(
-                                            child: SizedBox(
-                                              width: 400,
-                                              height: 200,
-                                              child: Lottie.asset(
-                                                  'Assets/lottie/DoneGreen.json'),
-                                            ),
-                                          ),
-                                        ],
-                                      );
-                                    });
+                                doneGreen();
                               }
                             }
                           }

@@ -5,9 +5,9 @@ class ItemModelData extends StatelessWidget {
   String modelName;
   String modelColorOne;
   String modelColorTwo;
-  int totalQuantaty;
-  int colorOneQuantaty;
-  int colorTwoQuantaty;
+  int? totalQuantaty;
+  int? colorOneQuantaty;
+  int? colorTwoQuantaty;
 
   ItemModelData(
       {super.key,

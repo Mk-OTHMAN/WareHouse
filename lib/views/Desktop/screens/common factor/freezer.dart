@@ -7,7 +7,6 @@ import 'package:warehouse/custom/header_tabel.dart';
 
 class FreezerScreen extends StatefulWidget {
   const FreezerScreen({super.key});
-
   @override
   State<FreezerScreen> createState() => _FreezerScreenState();
 }
@@ -56,8 +55,8 @@ class _FreezerScreenState extends State<FreezerScreen> {
                 totalQuantaty: data.get('total18'),
                 modelColorOne: 'SL',
                 modelColorTwo: 'CH',
-                colorOneQuantaty: data.get('18color1'),
-                colorTwoQuantaty: data.get('18color2')),
+                colorOneQuantaty: data.get('color1'),
+                colorTwoQuantaty: data.get('color2')),
           ],
         ));
   }

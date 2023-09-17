@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../responsive_layout/responsive.dart';
 import '../Routes/generate_routes.dart';
 import '../Routes/rutes_name.dart';
@@ -11,12 +12,21 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: Routes.home,
-      onGenerateRoute: RutesManager.generateRoute,
-      home: Responsive(
-          mobile: MobileView(), taplet: TabletView(), desktop: DesktopView()),
-    );
+    return ScreenUtilInit(
+        // designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        // Use builder only if you need to use library outside ScreenUtilInit context
+        builder: (_, child) {
+          return const MaterialApp(
+            debugShowCheckedModeBanner: false,
+            initialRoute: Routes.home,
+            onGenerateRoute: RutesManager.generateRoute,
+            home: Responsive(
+                mobile: MobileView(),
+                taplet: TabletView(),
+                desktop: DesktopView()),
+          );
+        });
   }
 }
