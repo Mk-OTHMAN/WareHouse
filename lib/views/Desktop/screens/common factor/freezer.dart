@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/custom/custom_model.dart';
@@ -17,6 +18,7 @@ class _FreezerScreenState extends State<FreezerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: CurvedNavigationBar(
+            height: 40.h,
             buttonBackgroundColor: Colors.white70,
             color: Colors.blue,
             backgroundColor: Colors.white,

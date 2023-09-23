@@ -1,11 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/custom/buttomsheet/deep_18.dart';
 import 'package:warehouse/custom/buttomsheet/deep_22.dart';
-import 'package:warehouse/custom/navigatin_Bar.dart';
 
 class FreezerToshibaEdit extends StatefulWidget {
   const FreezerToshibaEdit({super.key});
@@ -19,6 +19,7 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
+          height: 40.h,
           buttonBackgroundColor: Colors.white70,
           color: Colors.white70,
           backgroundColor: const Color(0xffFF735C),
@@ -42,24 +43,24 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
               color: const Color(0xffFF735C),
               // _____________ left side  ___________
               child: Column(children: [
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: 10.h,
                 ),
                 Text('Modifying',
                     style: GoogleFonts.rowdies(
-                        fontSize: 50,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.bold,
                         color: Colors.black)),
-                const SizedBox(height: 10),
+                SizedBox(height: 1.h),
                 Text('Now',
                     style: GoogleFonts.rowdies(
-                        fontSize: 35,
+                        fontSize: 25.sp,
                         fontWeight: FontWeight.bold,
                         color: Colors.white)),
-                const SizedBox(height: 5),
+                SizedBox(height: 2.h),
                 SizedBox(
-                  width: 100,
-                  height: 100,
+                  width: 100.w,
+                  height: 100.h,
                   child: Lottie.asset('Assets/lottie/down.json'),
                 ),
                 // _________- list text on left side ___________
@@ -71,14 +72,7 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
                           showModalBottomSheet(
                               context: context,
                               builder: (context) {
-                                return const DeepF22(
-                                  addQuantaty: 0,
-                                  addColor1: 0,
-                                  addColor2: 0,
-                                  deleteQuantaty: 0,
-                                  deleteColor1: 0,
-                                  deleteColor2: 0,
-                                );
+                                return const DeepF22();
                               },
                               shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.only(
@@ -86,22 +80,22 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
                                     topRight: Radius.circular(100)),
                               ));
                         },
-                        child: const Text(
+                        child: Text(
                           'DeepFreezer 22',
                           style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 5.sp,
+                              fontWeight: FontWeight.w400,
                               color: Colors.black),
                         )),
                     // _________ sizedBox __________
-                    const SizedBox(height: 5),
+                    SizedBox(height: 7.h),
                     // ___________ secondtext ____________
                     TextButton(
                         onPressed: () {
                           showModalBottomSheet(
                               context: context,
                               builder: (context) {
-                                return DeepF18();
+                                return const DeepF18();
                               },
                               shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.only(
@@ -109,11 +103,11 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
                                     topRight: Radius.circular(100)),
                               ));
                         },
-                        child: const Text(
+                        child: Text(
                           'DeepFreezer 18',
                           style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 5.sp,
+                              fontWeight: FontWeight.w400,
                               color: Colors.black),
                         )),
                   ],
@@ -124,8 +118,8 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
           flex: 3,
           // ignore: avoid_unnecessary_containers
           child: Container(
-            height: 500,
-            width: 200,
+            height: 500.h,
+            width: 200.w,
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('Assets/idea_01-removebg-preview.png'),

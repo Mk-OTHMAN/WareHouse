@@ -1,35 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/variables/text_edit_controler_variables.dart';
 
 class DeepF22 extends StatefulWidget {
-  final int addQuantaty,
-      addColor1,
-      addColor2,
-      deleteQuantaty,
-      deleteColor1,
-      deleteColor2;
-  const DeepF22(
-      //  ==============> this required variables un neccesary
-      {
-    super.key,
-    required this.addQuantaty,
-    required this.addColor1,
-    required this.addColor2,
-    required this.deleteQuantaty,
-    required this.deleteColor1,
-    required this.deleteColor2,
-  });
+  const DeepF22({super.key});
+
   @override
   State<DeepF22> createState() => _DeepF22State();
 }
 
 class _DeepF22State extends State<DeepF22> {
   Box data = Hive.box('data');
-  dynamic valueAddQyantatyFreezer22 = 0;
+  int valueAddQyantatyFreezer22 = 0;
   int valueAddColor1Freezer22 = 0;
   int valueAddColor2Freezer22 = 0;
   int valueDeleteQuantatyFreezer22 = 0;
@@ -47,26 +33,26 @@ class _DeepF22State extends State<DeepF22> {
   }
 
   //! ===================  1st function for test ===============================
-  void doneGreen() {
+  void doneGreen(String caseDescribe) {
     showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Center(
+            title: Center(
               child: Text(
                 'Done',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 5.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
             ),
-            content: const Text('  all proccess complete  . . .  !'),
+            content: Text(caseDescribe),
             actions: [
               Center(
                 child: SizedBox(
-                  width: 400,
-                  height: 200,
+                  width: 100.w,
+                  height: 50.h,
                   child: Lottie.asset('Assets/lottie/DoneGreen.json'),
                 ),
               ),
@@ -76,25 +62,25 @@ class _DeepF22State extends State<DeepF22> {
   }
 
   //!============================== 2nd function test =======================
-  void errorDialog() {
+  void errorDialog(String caseDescribe) {
     showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Center(
+            title: Center(
               child: Text(
                 'WRONG',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 5.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
             ),
-            content: const Text('         Please Add Quantaty And Color ... !'),
+            content: Text(caseDescribe),
             actions: [
               SizedBox(
-                width: 400,
-                height: 200,
+                width: 100.w,
+                height: 50.h,
                 child: Lottie.asset('Assets/lottie/Error.json'),
               ),
             ],
@@ -103,27 +89,26 @@ class _DeepF22State extends State<DeepF22> {
   }
 
   //!       ===================== 3rd function for test ===================
-  void robotError() {
+  void robotError(String caseDescribe) {
     showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Center(
+            title: Center(
               child: Text(
                 'WRONG',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 5.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
             ),
-            content: const Text(
-                '      not found number of total quantaty and color ... !'),
+            content: Text(caseDescribe),
             actions: [
               Center(
                 child: SizedBox(
-                  width: 400,
-                  height: 200,
+                  width: 100.w,
+                  height: 50.h,
                   child: Lottie.asset('Assets/lottie/Robot.json'),
                 ),
               ),
@@ -134,9 +119,6 @@ class _DeepF22State extends State<DeepF22> {
 
   @override
   Widget build(BuildContext context) {
-    if (data.get('freezer22Quantaty') == null) {
-      data.put('freezer22Quantaty', 0);
-    }
     return Row(
       children: [
         Expanded(
@@ -147,14 +129,17 @@ class _DeepF22State extends State<DeepF22> {
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30))),
             child: Column(
               children: [
+                SizedBox(
+                  height: 10.h,
+                ),
                 Text('Add',
                     style: GoogleFonts.rowdies(
                         color: Colors.white,
-                        fontSize: 40,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.bold)),
 
                 // ###########  ROW BODY ########### //
-                const SizedBox(height: 30),
+                SizedBox(height: 25.h),
                 Row(
                   children: [
                     Expanded(
@@ -163,18 +148,18 @@ class _DeepF22State extends State<DeepF22> {
                         child: Column(
                           children: [
                             Text(
-                              'total Quantaty',
+                              'total Quantity',
                               style: GoogleFonts.eduSaBeginner(
                                   color: Colors.black,
-                                  fontSize: 25,
+                                  fontSize: 7.sp,
                                   fontWeight: FontWeight.bold),
                             ),
                             //  ######  sizedBox  ########
-                            const SizedBox(height: 30),
+                            SizedBox(height: 15.h),
                             //  ______tetxt form field  ______ //
                             SizedBox(
                               // height: 50,
-                              width: 125,
+                              width: 30.w,
                               child: TextFormField(
                                   validator: (value) {
                                     if (value!.isEmpty) {
@@ -211,17 +196,17 @@ class _DeepF22State extends State<DeepF22> {
                         child: Column(
                           children: [
                             Text(
-                              'SL Quantaty',
+                              'SL Quantity',
                               style: GoogleFonts.eduSaBeginner(
                                   color: Colors.black,
-                                  fontSize: 25,
+                                  fontSize: 7.sp,
                                   fontWeight: FontWeight.bold),
                             ),
                             //  ######  sizedBox  ########
-                            const SizedBox(height: 30),
+                            SizedBox(height: 15.h),
                             //  ______tetxt foem field  ______ //
                             SizedBox(
-                              width: 125,
+                              width: 30.w,
                               child: TextFormField(
                                   validator: (value) {
                                     if (value!.isEmpty) {
@@ -257,17 +242,17 @@ class _DeepF22State extends State<DeepF22> {
                         child: Column(
                           children: [
                             Text(
-                              'CH Quantaty',
+                              'CH Quantity',
                               style: GoogleFonts.eduSaBeginner(
                                   color: Colors.black,
-                                  fontSize: 25,
+                                  fontSize: 7.sp,
                                   fontWeight: FontWeight.bold),
                             ),
                             //  ######  sizedBox  ########
-                            const SizedBox(height: 30),
+                            SizedBox(height: 15.h),
                             //  ______tetxt foem field  ______ //
                             SizedBox(
-                              width: 125,
+                              width: 30.w,
                               child: TextFormField(
                                   validator: (value) {
                                     if (value!.isEmpty) {
@@ -301,8 +286,8 @@ class _DeepF22State extends State<DeepF22> {
 
                 // ____________ sizedBox for Height __________
 
-                const SizedBox(
-                  height: 100,
+                SizedBox(
+                  height: 150.h,
                 ),
                 // ________________ elevatedButton for all text form fields ___________________
                 IconButton(
@@ -312,7 +297,8 @@ class _DeepF22State extends State<DeepF22> {
                         if (freezer22Quntaty.text.isEmpty &&
                             frezzer22Color1Quantaty.text.isEmpty &&
                             freezer22Color2Quantaty.text.isEmpty) {
-                          errorDialog();
+                          errorDialog(
+                              'Please Add Quantity And Color , you must add Quantity and at least one color ..!');
                           //_________ case add at one time 3*1 _____________
                         } else if (freezer22Quntaty.text.isNotEmpty &&
                             frezzer22Color1Quantaty.text.isNotEmpty &&
@@ -347,7 +333,8 @@ class _DeepF22State extends State<DeepF22> {
                                 'freezer22color2', valueAddColor2Freezer22);
                           }
 
-                          doneGreen();
+                          doneGreen(
+                              'success process, and well done for remembering to add the product');
                           freezer22Quntaty.clear();
                           frezzer22Color1Quantaty.clear();
                           freezer22Color2Quantaty.clear();
@@ -355,24 +342,27 @@ class _DeepF22State extends State<DeepF22> {
                         // ________ Check if user write in Quantaty Only ________ //
                         else if (frezzer22Color1Quantaty.text.isEmpty &&
                             freezer22Color2Quantaty.text.isEmpty) {
-                          errorDialog();
+                          errorDialog('you must choose at least one color.');
                           freezer22Quntaty.clear();
                         }
                         // ________ Check if user write in Color 1 Only _______ //
                         else if (freezer22Quntaty.text.isEmpty &&
                             freezer22Color2Quantaty.text.isEmpty) {
-                          errorDialog();
+                          errorDialog(
+                              'Please Add Quantity And Color , you must add Quantity and at least one color ..!');
                           frezzer22Color1Quantaty.clear();
                         }
                         // ________ check if user write in color 2 only _________ //
                         else if (freezer22Quntaty.text.isEmpty &&
                             frezzer22Color1Quantaty.text.isEmpty) {
-                          errorDialog();
+                          errorDialog(
+                              'Please Add Quantity And Color , you must add Quantity and at least one color ..!');
                           freezer22Color2Quantaty.clear();
                         }
                         // _______ check if user write on Color 1 and Color 2 only ______ //
                         else if (freezer22Quntaty.text.isEmpty) {
-                          errorDialog();
+                          errorDialog(
+                              "you must choose the Quantity,that's wrong add color only");
                           frezzer22Color1Quantaty.clear();
                           freezer22Color2Quantaty.clear();
                         }
@@ -404,7 +394,8 @@ class _DeepF22State extends State<DeepF22> {
                           freezer22Quntaty.clear();
                           frezzer22Color1Quantaty.clear();
                           Navigator.pop(context);
-                          doneGreen();
+                          doneGreen(
+                              'success process, and well done for remembering to add the product');
                         }
                         // _________ Add Proccess for All Quantaty & Color 2 Proccess ________ //
                         else {
@@ -431,7 +422,8 @@ class _DeepF22State extends State<DeepF22> {
                           freezer22Quntaty.clear();
                           freezer22Color2Quantaty.clear();
                           Navigator.pop(context);
-                          doneGreen();
+                          doneGreen(
+                              'success process, and well done for remembering to add the product');
                         }
                       });
                     },
@@ -453,30 +445,33 @@ class _DeepF22State extends State<DeepF22> {
                 borderRadius: BorderRadius.only(topRight: Radius.circular(30))),
             child: Column(
               children: [
+                SizedBox(
+                  height: 10.h,
+                ),
                 Text('Sell',
                     style: GoogleFonts.rowdies(
                         color: Colors.black,
-                        fontSize: 40,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.bold)),
                 // ________  Row body for text form field ______ //
-                const SizedBox(height: 30),
+                SizedBox(height: 25.h),
                 Row(
                   children: [
                     Expanded(
                       child: Column(
                         children: [
                           Text(
-                            'total Quantaty',
+                            'total Quantity',
                             style: GoogleFonts.eduSaBeginner(
                                 color: Colors.white,
-                                fontSize: 25,
+                                fontSize: 7.sp,
                                 fontWeight: FontWeight.bold),
                           ),
                           //  ######  sizedBox  ########
-                          const SizedBox(height: 30),
+                          SizedBox(height: 15.h),
                           //  ______tetxt form field  ______ //
                           SizedBox(
-                            width: 125,
+                            width: 30.w,
                             child: TextFormField(
                                 controller: deleteFreezer22Quantaty,
                                 keyboardType: TextInputType.number,
@@ -505,17 +500,17 @@ class _DeepF22State extends State<DeepF22> {
                       child: Column(
                         children: [
                           Text(
-                            'SL Quantaty',
+                            'SL Quantity',
                             style: GoogleFonts.eduSaBeginner(
                                 color: Colors.white,
-                                fontSize: 25,
+                                fontSize: 7.sp,
                                 fontWeight: FontWeight.bold),
                           ),
                           //  ######  sizedBox  ########
-                          const SizedBox(height: 30),
+                          SizedBox(height: 15.h),
                           //  ______tetxt foem field  ______ //
                           SizedBox(
-                            width: 125,
+                            width: 30.w,
                             child: TextFormField(
                                 controller: deleteFreezer22Color1Quntaty,
                                 keyboardType: TextInputType.number,
@@ -543,17 +538,17 @@ class _DeepF22State extends State<DeepF22> {
                       child: Column(
                         children: [
                           Text(
-                            'CH Quantaty',
+                            'CH Quantity',
                             style: GoogleFonts.eduSaBeginner(
                                 color: Colors.white,
-                                fontSize: 25,
+                                fontSize: 7.sp,
                                 fontWeight: FontWeight.bold),
                           ),
                           //  ######  sizedBox  ########
-                          const SizedBox(height: 30),
+                          SizedBox(height: 15.h),
                           //  ______tetxt foem field  ______ //
                           SizedBox(
-                            width: 125,
+                            width: 30.w,
                             child: TextFormField(
                                 controller: deleteFreezer22Color2Quantaty,
                                 keyboardType: TextInputType.number,
@@ -577,8 +572,8 @@ class _DeepF22State extends State<DeepF22> {
                     )
                   ],
                 ),
-                const SizedBox(
-                  height: 100,
+                SizedBox(
+                  height: 150.h,
                 ),
                 IconButton(
                     onPressed: () {
@@ -587,7 +582,8 @@ class _DeepF22State extends State<DeepF22> {
                         if (deleteFreezer22Quantaty.text.isEmpty &&
                             deleteFreezer22Color1Quntaty.text.isEmpty &&
                             deleteFreezer22Color2Quantaty.text.isEmpty) {
-                          robotError();
+                          robotError(
+                              'Please Add Quantity And Color , you must add Quantity and at least one color ..!');
                         }
                         // __________________  case delete at one time 3*1 _________
                         else if (deleteFreezer22Quantaty.text.isNotEmpty &&
@@ -605,7 +601,8 @@ class _DeepF22State extends State<DeepF22> {
                                   data.get('freezer22color1') >= 0 ||
                               deletecolor2 > data.get('freezer22color2') &&
                                   data.get('freezer22color2') >= 0) {
-                            robotError();
+                            robotError(
+                                'please check on the total Quantity and colors Quantity');
                             deleteFreezer22Quantaty.clear();
                             deleteFreezer22Color1Quntaty.clear();
                             deleteFreezer22Color2Quantaty.clear();
@@ -623,7 +620,8 @@ class _DeepF22State extends State<DeepF22> {
                             data.put(
                                 'freezer22color2', valueDeleteColor2Freezer22);
 
-                            doneGreen();
+                            doneGreen(
+                                'success process, and well done for remembering to remove the product');
                             deleteFreezer22Quantaty.clear();
                             deleteFreezer22Color1Quntaty.clear();
                             deleteFreezer22Color2Quantaty.clear();
@@ -632,24 +630,27 @@ class _DeepF22State extends State<DeepF22> {
                         // _______ chek if recived from user Quantaty only ________ //
                         else if (deleteFreezer22Color1Quntaty.text.isEmpty &&
                             deleteFreezer22Color2Quantaty.text.isEmpty) {
-                          robotError();
+                          robotError('you must choose at least one color.');
                           deleteFreezer22Quantaty.clear();
                         }
                         // __________ check if recived from user color 1 only ________ //
                         else if (deleteFreezer22Quantaty.text.isEmpty &&
                             deleteFreezer22Color2Quantaty.text.isEmpty) {
-                          robotError();
+                          robotError(
+                              "you must choose the Quantity,that's wrong add color only");
                           deleteFreezer22Color1Quntaty.clear();
                         }
                         // ________ chek if recived from user color 2 only _________ //
                         else if (deleteFreezer22Quantaty.text.isEmpty &&
                             deleteFreezer22Color1Quntaty.text.isEmpty) {
-                          robotError();
+                          robotError(
+                              "you must choose the Quantity,that's wrong add color only");
                           deleteFreezer22Color2Quantaty.clear();
                         }
                         // _____________ Check if user write input in color 1 and color 2 only _______ //
                         else if (deleteFreezer22Quantaty.text.isEmpty) {
-                          robotError();
+                          robotError(
+                              "you must choose the Quantity,that's wrong add color only");
                           deleteFreezer22Color1Quntaty.clear();
                           deleteFreezer22Color2Quantaty.clear();
                         }
@@ -661,7 +662,8 @@ class _DeepF22State extends State<DeepF22> {
                                 int.parse(deleteFreezer22Quantaty.text);
                             if (deletequantaty >
                                 data.get('freezer22Quantaty')) {
-                              robotError();
+                              robotError(
+                                  'sorry, the number is greater than the stored quantity,please check on total Quantity');
                               deleteFreezer22Quantaty.clear();
                               deleteFreezer22Color1Quntaty.clear();
                             }
@@ -673,7 +675,8 @@ class _DeepF22State extends State<DeepF22> {
                                 int.parse(deleteFreezer22Color1Quntaty.text);
                             if (deletecolor1 > data.get('freezer22color1') &&
                                 data.get('freezer22color1') > 0) {
-                              robotError();
+                              robotError(
+                                  'sorry, the number is greater than the stored quantity,please check on color Quantity');
                             }
                             deleteFreezer22Color1Quntaty.clear();
                           }
@@ -684,7 +687,8 @@ class _DeepF22State extends State<DeepF22> {
                                 int.parse(deleteFreezer22Color2Quantaty.text);
                             if (deletecolor2 > data.get('freezer22color2') &&
                                 data.get('freezer22color2') > 0) {
-                              robotError();
+                              robotError(
+                                  'sorry, the number is greater than the stored quantity,please check on color Quantity');
                             }
                           }
                           // ___________ Case Delete From All Qantaty And Color 1 Proccess
@@ -699,7 +703,8 @@ class _DeepF22State extends State<DeepF22> {
                               if (deletequantaty >
                                       data.get('freezer22Quantaty') ||
                                   deletecolor1 > data.get('freezer22color1')) {
-                                robotError();
+                                robotError(
+                                    'sorry, the number is greater than the stored quantity,please check on color or total Quantity');
                                 // deleteFreezer22Quantaty.clear();
                                 // deleteFreezer22Color1Quntaty.clear();
                               } else {
@@ -722,7 +727,8 @@ class _DeepF22State extends State<DeepF22> {
 
                                 // deleteFreezer22Color1Quntaty.clear();
 
-                                doneGreen();
+                                doneGreen(
+                                    'success process, and well done for remembering to delete the product');
                               }
                             }
                             deleteFreezer22Quantaty.clear();
@@ -740,7 +746,8 @@ class _DeepF22State extends State<DeepF22> {
                               if (deletequantaty >
                                       data.get('freezer22Quantaty') ||
                                   deletecolor2 > data.get('freezer22color2')) {
-                                robotError();
+                                robotError(
+                                    'sorry, the number is greater than the stored quantity,please check on color or total Quantity');
                                 deleteFreezer22Quantaty.clear();
                                 deleteFreezer22Color2Quantaty.clear();
                               } else {
@@ -761,7 +768,8 @@ class _DeepF22State extends State<DeepF22> {
                                     valueDeleteColor2Freezer22);
 
                                 deleteFreezer22Color2Quantaty.clear();
-                                doneGreen();
+                                doneGreen(
+                                    'success process, and well done for remembering to delete the product');
                               }
                             }
                           }

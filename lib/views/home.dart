@@ -18,14 +18,16 @@ class Home extends StatelessWidget {
         splitScreenMode: true,
         // Use builder only if you need to use library outside ScreenUtilInit context
         builder: (_, child) {
-          return const MaterialApp(
-            debugShowCheckedModeBanner: false,
-            initialRoute: Routes.home,
-            onGenerateRoute: RutesManager.generateRoute,
-            home: Responsive(
-                mobile: MobileView(),
-                taplet: TabletView(),
-                desktop: DesktopView()),
+          return const SafeArea(
+            child: MaterialApp(
+              debugShowCheckedModeBanner: false,
+              initialRoute: Routes.home,
+              onGenerateRoute: RutesManager.generateRoute,
+              home: Responsive(
+                  mobile: MobileView(),
+                  taplet: TabletView(),
+                  desktop: DesktopView()),
+            ),
           );
         });
   }

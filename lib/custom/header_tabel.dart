@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomHeaderTabel extends StatelessWidget {
   const CustomHeaderTabel({super.key});
@@ -11,17 +12,17 @@ class CustomHeaderTabel extends StatelessWidget {
       children: [
         // **************** Model Name Container *******************
         Container(
-          width: W / 3,
-          height: H * 0.10,
+          width: 120.w,
+          height: 40.h,
           decoration: BoxDecoration(
               color: Colors.red,
               border:
                   Border.all(style: BorderStyle.solid, color: Colors.black)),
-          child: const Center(
+          child: Center(
             child: Text(
               'Model Name',
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
@@ -31,17 +32,17 @@ class CustomHeaderTabel extends StatelessWidget {
         // ***************  Model Quntaty Container  ******************
 
         Container(
-          width: W / 3,
-          height: H * 0.10,
+          width: 120.w,
+          height: 40.h,
           decoration: BoxDecoration(
               color: Colors.amber,
               border:
                   Border.all(style: BorderStyle.solid, color: Colors.black)),
-          child: const Center(
+          child: Center(
             child: Text(
-              ' QUANTATY ',
+              ' QUANTITY ',
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
@@ -51,21 +52,35 @@ class CustomHeaderTabel extends StatelessWidget {
         //  *****************  Color Item Container **************
 
         Container(
-            width: W / 3,
-            height: H * 0.10,
+            width: 120.w,
+            height: 40.h,
             decoration: BoxDecoration(
                 color: Colors.green,
                 border:
                     Border.all(style: BorderStyle.solid, color: Colors.black)),
-            child: const Center(
-              child: Text(
-                ' Colors Avilabel From Model ',
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-            )),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SizedBox(
+                  width: 30.w,
+                  child: Text(
+                    'Color',
+                    style:
+                        TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Text(
+                  'SL',
+                  style:
+                      TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w400),
+                ),
+                Text(
+                  'CH',
+                  style:
+                      TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w400),
+                )
+              ],
+            ))
       ],
     );
   }

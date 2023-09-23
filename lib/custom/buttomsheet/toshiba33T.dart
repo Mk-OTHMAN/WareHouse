@@ -5,33 +5,33 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lottie/lottie.dart';
 
-class DeepF18 extends StatefulWidget {
-  const DeepF18({super.key});
+class Tosh33t extends StatefulWidget {
+  const Tosh33t({super.key});
 
   @override
-  State<DeepF18> createState() => _DeepF18State();
+  State<Tosh33t> createState() => _Tosh33tState();
 }
 
-class _DeepF18State extends State<DeepF18> {
+class _Tosh33tState extends State<Tosh33t> {
   Box data = Hive.box('data');
   //! variables for calculate proccess to data
-  int valueAddQyantatyFreezer18 = 0;
-  int valueAddColor1Freezer18 = 0;
-  int valueAddColor2Freezer18 = 0;
-  int valueDeleteQuantatyFreezer18 = 0;
-  int valueDeleteColor1Freezer18 = 0;
-  int valueDeleteColor2Freezer18 = 0;
+  int valueAddQyantaty33T = 0;
+  int valueAdd33TColor1 = 0;
+  int valueAdd33TColor2 = 0;
+  int valueDeleteQuantaty33T = 0;
+  int valueDelete33TColor1 = 0;
+  int valueDelete33TColor2 = 0;
   //! variables for names data box
   // String qua = 'total18';
   // String color1 = '18color1';
   // String color2 = '18color2';
   //! variables for parseing proccess at controller
-  int addtotal18 = 0;
-  int addcolor1f18 = 0;
-  int addcolor2f18 = 0;
-  int dtotal18 = 0;
-  int dcolor1f18 = 0;
-  int dcolor2f18 = 0;
+  int addtotal33T = 0;
+  int add33Tcolor1 = 0;
+  int add33Tcolor2 = 0;
+  int dtotal33T = 0;
+  int d33Tcolor1 = 0;
+  int d33Tcolor2 = 0;
 
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   validat() {
@@ -45,19 +45,30 @@ class _DeepF18State extends State<DeepF18> {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController qut = TextEditingController();
-    TextEditingController color1f18 = TextEditingController();
-    TextEditingController color2f18 = TextEditingController();
-    TextEditingController deletetotal18 = TextEditingController();
-    TextEditingController delete18color1 = TextEditingController();
-    TextEditingController delete18color2 = TextEditingController();
+    TextEditingController total33T = TextEditingController();
+    TextEditingController r33Tcolor1 = TextEditingController();
+    TextEditingController r33Tcolor2 = TextEditingController();
+    TextEditingController deletetotal33T = TextEditingController();
+    TextEditingController delete33Tcolor1 = TextEditingController();
+    TextEditingController delete33Tcolor2 = TextEditingController();
 
-    var t18 = qut;
-    var c1f18 = color1f18;
-    var c2f18 = color2f18;
-    var dt18 = deletetotal18;
-    var dc1f18 = delete18color1;
-    var dc2f18 = delete18color2;
+    var t33T = total33T;
+    var c1R33T = r33Tcolor1;
+    var c2R33T = r33Tcolor2;
+    var dt33T = deletetotal33T;
+    var dc1R33T = delete33Tcolor1;
+    var dc2R33T = delete33Tcolor2;
+
+    if (data.get('total33T') == null) {
+      data.put('total33T', 0);
+    }
+    if (data.get('33Tcolor1') == null) {
+      data.put('33Tcolor1', 0);
+    }
+    if (data.get('33Tcolor2') == null) {
+      data.put('33Tcolor2', 0);
+    }
+
     //! ===================  1st function for test ===============================
     void doneGreen(String caseDescribe) {
       showDialog(
@@ -193,7 +204,7 @@ class _DeepF18State extends State<DeepF18> {
                                     }
                                     return null;
                                   },
-                                  controller: qut,
+                                  controller: total33T,
                                   keyboardType: TextInputType.number,
                                   inputFormatters: <TextInputFormatter>[
                                     FilteringTextInputFormatter.allow(
@@ -240,7 +251,7 @@ class _DeepF18State extends State<DeepF18> {
                                     }
                                     return null;
                                   },
-                                  controller: color1f18,
+                                  controller: r33Tcolor1,
                                   keyboardType: TextInputType.number,
                                   inputFormatters: <TextInputFormatter>[
                                     FilteringTextInputFormatter.allow(
@@ -286,7 +297,7 @@ class _DeepF18State extends State<DeepF18> {
                                     }
                                     return null;
                                   },
-                                  controller: color2f18,
+                                  controller: r33Tcolor2,
                                   keyboardType: TextInputType.number,
                                   inputFormatters: <TextInputFormatter>[
                                     FilteringTextInputFormatter.allow(
@@ -320,103 +331,117 @@ class _DeepF18State extends State<DeepF18> {
                     onPressed: () {
                       setState(() {
                         //?_______ Check Quantaty & Color 1 & Color is Empty _____ //
-                        if (t18.text.isEmpty &&
-                            c1f18.text.isEmpty &&
-                            c2f18.text.isEmpty) {
+                        if (t33T.text.isEmpty &&
+                            c1R33T.text.isEmpty &&
+                            c2R33T.text.isEmpty) {
                           errorDialog(
                               'Please Add Quantity And Color , you must add Quantity and at least one color ..!');
                         }
 
                         //? ________ Check if user write in Quantaty Only ________ //
-                        else if (c1f18.text.isEmpty && c2f18.text.isEmpty) {
+                        else if (c1R33T.text.isEmpty && c2R33T.text.isEmpty) {
                           errorDialog('you must choose at least one color.');
-                          t18.clear();
+                          t33T.clear();
                         }
                         // ?________ Check if user write in Color 1 Only _______ //
-                        else if (t18.text.isEmpty && c2f18.text.isEmpty) {
+                        else if (t33T.text.isEmpty && c2R33T.text.isEmpty) {
                           errorDialog(
                               "you must choose the Quantity,that's wrong add color only");
-                          c1f18.clear();
+                          c1R33T.clear();
                         }
                         //? ________ check if user write in color 2 only _________ //
-                        else if (t18.text.isEmpty && c1f18.text.isEmpty) {
+                        else if (t33T.text.isEmpty && c1R33T.text.isEmpty) {
                           errorDialog(
                               "you must choose the Quantity, that's wrong add color only");
-                          c2f18.clear();
+                          c2R33T.clear();
                         }
                         //? _______ check if user write on Color 1 and Color 2 only ______ //
-                        else if (t18.text.isEmpty) {
+                        else if (t33T.text.isEmpty) {
                           errorDialog(
                               "you must choose the Quantity, that's wrong add color only");
-                          c1f18.clear();
-                          c2f18.clear();
+                          c1R33T.clear();
+                          c2R33T.clear();
                         }
                         //!_________ case add at one time 3*1 _____________
-                        else if (t18.text.isNotEmpty &&
-                            c1f18.text.isNotEmpty &&
-                            c2f18.text.isNotEmpty) {
-                          addtotal18 = int.parse(t18.text);
-                          addcolor1f18 = int.parse(c1f18.text);
-                          addcolor2f18 = int.parse(c2f18.text);
-                          if (valueAddQyantatyFreezer18 == 0) {
-                            valueAddQyantatyFreezer18 = data.get('total18');
-                            valueAddQyantatyFreezer18 += addtotal18;
-                            data.put('total18', valueAddQyantatyFreezer18);
+                        else if (t33T.text.isNotEmpty &&
+                            c1R33T.text.isNotEmpty &&
+                            c2R33T.text.isNotEmpty) {
+                          addtotal33T = int.parse(t33T.text);
+                          add33Tcolor1 = int.parse(c1R33T.text);
+                          add33Tcolor2 = int.parse(c2R33T.text);
+                          if (valueAddQyantaty33T == 0) {
+                            valueAddQyantaty33T =
+                                data.get('total33T'); //! =========> 👀
+                            valueAddQyantaty33T += addtotal33T;
+                            data.put(
+                                'total33T', valueAddQyantaty33T); //! =====> 👀
                           }
 
-                          if (valueAddColor1Freezer18 == 0) {
-                            valueAddColor1Freezer18 = data.get('color1');
-                            valueAddColor1Freezer18 += addcolor1f18;
-                            data.put('color1', valueAddColor1Freezer18);
+                          if (valueAdd33TColor1 == 0) {
+                            valueAdd33TColor1 =
+                                data.get('33Tcolor1'); //!  ==========> 👀
+                            valueAdd33TColor1 += add33Tcolor1;
+                            data.put('33Tcolor1',
+                                valueAdd33TColor1); //! ========> 👀
                           }
 
-                          if (valueAddColor2Freezer18 == 0) {
-                            valueAddColor2Freezer18 = data.get('color2');
-                            valueAddColor2Freezer18 += addcolor2f18;
-                            data.put('color2', valueAddColor2Freezer18);
+                          if (valueAdd33TColor2 == 0) {
+                            valueAdd33TColor2 =
+                                data.get('33Tcolor2'); // ! =======> 👀
+                            valueAdd33TColor2 += add33Tcolor2;
+                            data.put(
+                                '33Tcolor2', valueAdd33TColor2); //! =======>👀
                           }
                           doneGreen(
                               'success process, and well done for remembering to add the product');
-                          qut.clear();
-                          color1f18.clear();
-                          color2f18.clear();
+                          total33T.clear();
+                          r33Tcolor1.clear();
+                          r33Tcolor2.clear();
                         }
                         // !_________ Add Proccess for All Quantaty and color 1 _______ //
-                        else if (c2f18.text.isEmpty) {
-                          addtotal18 = int.parse(t18.text);
-                          if (valueAddQyantatyFreezer18 == 0) {
-                            valueAddQyantatyFreezer18 = data.get('total18');
+                        else if (c2R33T.text.isEmpty) {
+                          addtotal33T = int.parse(t33T.text);
+                          if (valueAddQyantaty33T == 0) {
+                            valueAddQyantaty33T =
+                                data.get('total33T'); //! =========> 👀
                           }
-                          valueAddQyantatyFreezer18 += addtotal18;
-                          data.put('total18', valueAddQyantatyFreezer18);
-                          addcolor1f18 = int.parse(c1f18.text);
-                          if (valueAddColor1Freezer18 == 0) {
-                            valueAddColor1Freezer18 = data.get('color1');
+                          valueAddQyantaty33T += addtotal33T;
+                          data.put(
+                              'total33T', valueAddQyantaty33T); //! ======> 👀
+                          add33Tcolor1 = int.parse(c1R33T.text);
+                          if (valueAdd33TColor1 == 0) {
+                            valueAdd33TColor1 =
+                                data.get('33Tcolor1'); //! =======> 👀
                           }
-                          valueAddColor1Freezer18 += addcolor1f18;
-                          data.put('color1', valueAddColor1Freezer18);
-                          t18.clear();
-                          c1f18.clear();
+                          valueAdd33TColor1 += add33Tcolor1;
+                          data.put(
+                              '33Tcolor1', valueAdd33TColor1); //! =======> 👀
+                          t33T.clear();
+                          c1R33T.clear();
                           Navigator.pop(context);
                           doneGreen(
                               'success process, and well done for remembering to add the product');
                         }
                         // !_________ Add Proccess for All Quantaty & Color 2  ________ //
                         else {
-                          addtotal18 = int.parse(t18.text);
-                          if (valueAddQyantatyFreezer18 == 0) {
-                            valueAddQyantatyFreezer18 = data.get('total18');
+                          addtotal33T = int.parse(t33T.text);
+                          if (valueAddQyantaty33T == 0) {
+                            valueAddQyantaty33T =
+                                data.get('total33T'); //! =======> 👀
                           }
-                          valueAddQyantatyFreezer18 += addtotal18;
-                          data.put('total18', valueAddQyantatyFreezer18);
-                          addcolor2f18 = int.parse(c2f18.text);
-                          if (valueAddColor2Freezer18 == 0) {
-                            valueAddColor2Freezer18 = data.get('color2');
+                          valueAddQyantaty33T += addtotal33T;
+                          data.put(
+                              'total33T', valueAddQyantaty33T); //! =======> 👀
+                          add33Tcolor2 = int.parse(c2R33T.text);
+                          if (valueAdd33TColor2 == 0) {
+                            valueAdd33TColor2 =
+                                data.get('33Tcolor2'); //! =======> 👀
                           }
-                          valueAddColor2Freezer18 += addcolor2f18;
-                          data.put('color2', valueAddColor2Freezer18);
-                          t18.clear();
-                          c2f18.clear();
+                          valueAdd33TColor2 += add33Tcolor2;
+                          data.put(
+                              '33Tcolor2', valueAdd33TColor2); //! =======> 👀
+                          t33T.clear();
+                          c2R33T.clear();
                           Navigator.pop(context);
                           doneGreen(
                               'success process, and well done for remembering to add the product');
@@ -470,7 +495,7 @@ class _DeepF18State extends State<DeepF18> {
                           SizedBox(
                             width: 30.w,
                             child: TextFormField(
-                                controller: deletetotal18,
+                                controller: deletetotal33T,
                                 keyboardType: TextInputType.number,
                                 inputFormatters: <TextInputFormatter>[
                                   FilteringTextInputFormatter.allow(
@@ -509,7 +534,7 @@ class _DeepF18State extends State<DeepF18> {
                           SizedBox(
                             width: 30.w,
                             child: TextFormField(
-                                controller: delete18color1,
+                                controller: delete33Tcolor1,
                                 keyboardType: TextInputType.number,
                                 inputFormatters: <TextInputFormatter>[
                                   FilteringTextInputFormatter.allow(
@@ -547,7 +572,7 @@ class _DeepF18State extends State<DeepF18> {
                           SizedBox(
                             width: 30.w,
                             child: TextFormField(
-                                controller: delete18color2,
+                                controller: delete33Tcolor2,
                                 keyboardType: TextInputType.number,
                                 inputFormatters: <TextInputFormatter>[
                                   FilteringTextInputFormatter.allow(
@@ -576,166 +601,191 @@ class _DeepF18State extends State<DeepF18> {
                     onPressed: () {
                       setState(() {
                         // ?__________ check if Quantaty & color 1 & Color 2 Empty _______ //
-                        if (dt18.text.isEmpty &&
-                            dc1f18.text.isEmpty &&
-                            dc2f18.text.isEmpty) {
+                        if (dt33T.text.isEmpty &&
+                            dc1R33T.text.isEmpty &&
+                            dc2R33T.text.isEmpty) {
                           robotError(
                               'Please Add Quantity And Color , you must add Quantity and at least one color ..!');
                         }
                         // ?_______ chek if recived from user Quantaty only ________ //
-                        else if (dc1f18.text.isEmpty && dc2f18.text.isEmpty) {
+                        else if (dc1R33T.text.isEmpty && dc2R33T.text.isEmpty) {
                           robotError('you must choose at least one color.');
-                          dt18.clear();
+                          dt33T.clear();
                         }
                         //? __________ check if recived from user color 1 only ________ //
-                        else if (dt18.text.isEmpty && dc2f18.text.isEmpty) {
+                        else if (dt33T.text.isEmpty && dc2R33T.text.isEmpty) {
                           robotError(
                               "you must choose the Quantity,that's wrong add color only");
-                          dc1f18.clear();
+                          dc1R33T.clear();
                         }
                         // ?________ chek if recived from user color 2 only _________ //
-                        else if (dt18.text.isEmpty && dc1f18.text.isEmpty) {
+                        else if (dt33T.text.isEmpty && dc1R33T.text.isEmpty) {
                           robotError(
                               "you must choose the Quantity,that's wrong add color only");
-                          dc2f18.clear();
+                          dc2R33T.clear();
                         }
                         // ?_____________ Check if user write input in color 1 and color 2 only _______ //
-                        else if (dt18.text.isEmpty) {
+                        else if (dt33T.text.isEmpty) {
                           robotError(
                               "you must choose the Quantity,that's wrong add color only");
-                          dc1f18.clear();
-                          dc2f18.clear();
+                          dc1R33T.clear();
+                          dc2R33T.clear();
                         }
 
                         //? _____________ Check All Quantaty And input from User _________ //
-                        else if (data.get('total18') == 0) {
-                          dtotal18 = int.parse(deletetotal18.text);
-                          if (dtotal18 > data.get('total18')) {
+                        else if (data.get('total33T') == 0) {
+                          //! =======> 👀
+                          dtotal33T = int.parse(deletetotal33T.text);
+                          if (dtotal33T > data.get('total33T')) {
+                            //! =======> 👀
                             robotError(
                                 '''sorry, the number is greater than the stored quantity, the stored quantity is zero
 ''');
-                            dt18.clear();
-                            dc1f18.clear();
+                            dt33T.clear();
+                            dc1R33T.clear();
                           }
                         }
                         //? ____________ Check Color 1 Quantaty And input frpm User ______________ //
-                        else if (data.get('color1') == 0 || dcolor1f18 > 0) {
+                        else if (data.get('33Tcolor1') == 0 || d33Tcolor1 > 0) {
+                          //! =======> 👀
                           robotError(
                               '''sorry, the number is greater than the stored quantity, the stored quantity of color one is zero
 ''');
-                          if (dcolor1f18 > data.get('color1') &&
-                              data.get('color1') > 0) {
+                          if (d33Tcolor1 >
+                                  data.get('33Tcolor1') && //! =======> 👀
+                              data.get('33Tcolor1') > 0) {
+                            //! =======> 👀
                             robotError(
                                 '''sorry, the number is greater than the stored quantity, the stored quantity of color one
 ''');
                           }
-                          dc1f18.clear();
+                          dc1R33T.clear();
                         }
                         //? ___________ Check Color 2 Quantaty And input from User _____________
-                        else if (data.get('color2') == 0 || dcolor1f18 > 0) {
+                        else if (data.get('33Tcolor2') == 0 || d33Tcolor1 > 0) {
+                          //! =======> 👀
                           robotError(
                               '''sorry, the number is greater than the stored quantity, the stored quantity of color two is zero
 ''');
-                          if (dcolor2f18 > data.get('color2') &&
-                              data.get('color2') > 0) {
+                          if (d33Tcolor2 >
+                                  data.get('33Tcolor2') && //! =======> 👀
+                              data.get('33Tcolor2') > 0) {
+                            //! =======> 👀
                             robotError(
                                 '''sorry, the number is greater than the stored quantity, the stored quantity of color two
 ''');
                           }
                         }
                         //! __________________  case delete at one time 3*1 _________
-                        else if (dt18.text.isNotEmpty &&
-                            dc1f18.text.isNotEmpty &&
-                            dc2f18.text.isNotEmpty) {
-                          dtotal18 = int.parse(dt18.text);
-                          dcolor1f18 = int.parse(dc1f18.text);
-                          dcolor2f18 = int.parse(dc2f18.text);
-                          if (dtotal18 > data.get('total18') &&
-                                  data.get('total18') >= 0 ||
-                              dcolor1f18 > data.get('color1') &&
-                                  data.get('color1') >= 0 ||
-                              dcolor2f18 > data.get('color2') &&
-                                  data.get('color2') >= 0) {
+                        else if (dt33T.text.isNotEmpty &&
+                            dc1R33T.text.isNotEmpty &&
+                            dc2R33T.text.isNotEmpty) {
+                          dtotal33T = int.parse(dt33T.text);
+                          d33Tcolor1 = int.parse(dc1R33T.text);
+                          d33Tcolor2 = int.parse(dc2R33T.text);
+                          if (dtotal33T >
+                                      data.get('total33T') && //! =======> 👀
+                                  data.get('total33T') >= 0 || //! =======> 👀
+                              d33Tcolor1 >
+                                      data.get('33Tcolor1') && //! =======> 👀
+                                  data.get('33Tcolor1') >= 0 || //! =======> 👀
+                              d33Tcolor2 >
+                                      data.get('33Tcolor2') && //! =======> 👀
+                                  data.get('33Tcolor2') >= 0) {
+                            //! =======> 👀
                             robotError(
                                 'please check on the total Quantity and colors Quantity');
-                            dt18.clear();
-                            dc1f18.clear();
-                            dc2f18.clear();
+                            dt33T.clear();
+                            dc1R33T.clear();
+                            dc2R33T.clear();
                           } else {
-                            dtotal18 = int.parse(dt18.text);
-                            dcolor1f18 = int.parse(dc1f18.text);
-                            dcolor2f18 = int.parse(dc2f18.text);
-                            valueDeleteQuantatyFreezer18 =
-                                data.get('total18') - dtotal18;
-                            data.put('total18', valueDeleteQuantatyFreezer18);
-                            valueDeleteColor1Freezer18 =
-                                data.get('color1') - dcolor1f18;
-                            data.put('color1', valueDeleteColor1Freezer18);
-                            valueDeleteColor2Freezer18 =
-                                data.get('color2') - dcolor2f18;
-                            data.put('color2', valueDeleteColor2Freezer18);
+                            dtotal33T = int.parse(dt33T.text);
+                            d33Tcolor1 = int.parse(dc1R33T.text);
+                            d33Tcolor2 = int.parse(dc2R33T.text);
+                            valueDeleteQuantaty33T = data.get('total33T') -
+                                dtotal33T; //! =======> 👀
+                            data.put('total33T',
+                                valueDeleteQuantaty33T); //! =======> 👀
+                            valueDelete33TColor1 = data.get('33Tcolor1') -
+                                d33Tcolor1; //! =======> 👀
+                            data.put('33Tcolor1',
+                                valueDelete33TColor1); //! =======> 👀
+                            valueDelete33TColor2 = data.get('33Tcolor2') -
+                                d33Tcolor2; //! =======> 👀
+                            data.put('33Tcolor2',
+                                valueDelete33TColor2); //! =======> 👀
                             doneGreen(
                                 'success process, and well done for remembering to remove the product');
-                            dt18.clear();
-                            dc1f18.clear();
-                            dc2f18.clear();
+                            dt33T.clear();
+                            dc1R33T.clear();
+                            dc2R33T.clear();
                           }
                         }
 
                         //! ___________ Case Delete From All Qantaty And Color 1 Proccess
-                        else if (dc2f18.text.isEmpty) {
-                          if (data.get('total18') > 0 ||
-                              data.get('color1') > 0) {
-                            dtotal18 = int.parse(dt18.text);
-                            dcolor1f18 = int.parse(dc1f18.text);
+                        else if (dc2R33T.text.isEmpty) {
+                          if (data.get('total33T') > 0 || //! =======> 👀
+                              data.get('33Tcolor1') > 0) {
+                            //! =======> 👀
+                            dtotal33T = int.parse(dt33T.text);
+                            d33Tcolor1 = int.parse(dc1R33T.text);
 
-                            if (dtotal18 > data.get('total18') ||
-                                dcolor1f18 > data.get('color1')) {
+                            if (dtotal33T >
+                                    data.get('total33T') || //! =======> 👀
+                                d33Tcolor1 > data.get('33Tcolor1')) {
+                              //! =======> 👀
                               robotError(
                                   'sorry, the number is greater than the stored quantity,please check on color or total Quantity');
                             } else {
-                              dtotal18 = int.parse(dt18.text);
-                              dcolor1f18 = int.parse(dc1f18.text);
-                              valueDeleteQuantatyFreezer18 =
-                                  data.get('total18') - dtotal18;
-                              data.put('total18', valueDeleteQuantatyFreezer18);
+                              dtotal33T = int.parse(dt33T.text);
+                              d33Tcolor1 = int.parse(dc1R33T.text);
+                              valueDeleteQuantaty33T = data.get('total33T') -
+                                  dtotal33T; //! =======> 👀
+                              data.put('total33T',
+                                  valueDeleteQuantaty33T); //! =======> 👀
 
-                              valueDeleteColor1Freezer18 =
-                                  data.get('color1') - dcolor1f18;
-                              data.put('color1', valueDeleteColor1Freezer18);
+                              valueDelete33TColor1 = data.get('33Tcolor1') -
+                                  d33Tcolor1; //! =======> 👀
+                              data.put('33Tcolor1',
+                                  valueDelete33TColor1); //! =======> 👀
 
                               doneGreen(
                                   'success process, and well done for remembering to remove the product');
                             }
                           }
-                          dt18.clear();
-                          dc1f18.clear();
+                          dt33T.clear();
+                          dc1R33T.clear();
                         }
 
                         // !_______________ Case All Quantaty delete Proccess And Color 2 __________ //
-                        else if (dc1f18.text.isEmpty) {
-                          if (data.get('total18') > 0 ||
-                              data.get('color2') > 0) {
-                            dtotal18 = int.parse(dt18.text);
-                            dcolor2f18 = int.parse(dc2f18.text);
+                        else if (dc1R33T.text.isEmpty) {
+                          if (data.get('total33T') > 0 || //! =======> 👀
+                              data.get('33Tcolor2') > 0) {
+                            //! =======> 👀
+                            dtotal33T = int.parse(dt33T.text);
+                            d33Tcolor2 = int.parse(dc2R33T.text);
                           }
-                          if (dtotal18 > data.get('total18') ||
-                              dcolor2f18 > data.get('color2')) {
+                          if (dtotal33T >
+                                  data.get('total33T') || //! =======> 👀
+                              d33Tcolor2 > data.get('33Tcolor2')) {
+                            //! =======> 👀
                             robotError(
                                 'sorry, the number is greater than the stored quantity,please check on color or total Quantity');
-                            dt18.clear();
-                            dc2f18.clear();
+                            dt33T.clear();
+                            dc2R33T.clear();
                           } else {
-                            dtotal18 = int.parse(dt18.text);
-                            dcolor2f18 = int.parse(dc2f18.text);
-                            valueDeleteQuantatyFreezer18 =
-                                data.get('total18') - dtotal18;
-                            data.put('total18', valueDeleteQuantatyFreezer18);
+                            dtotal33T = int.parse(dt33T.text);
+                            d33Tcolor2 = int.parse(dc2R33T.text);
+                            valueDeleteQuantaty33T = data.get('total33T') -
+                                dtotal33T; //! =======> 👀
+                            data.put('total33T',
+                                valueDeleteQuantaty33T); //! =======> 👀
                             // dt18.clear();
 
-                            valueDeleteColor2Freezer18 =
-                                data.get('color2') - dcolor2f18;
-                            data.put('color2', valueDeleteColor2Freezer18);
+                            valueDelete33TColor2 = data.get('33Tcolor2') -
+                                d33Tcolor2; //! =======> 👀
+                            data.put('33Tcolor2',
+                                valueDelete33TColor2); //! =======> 👀
 
                             //dc2f18.clear();
                             doneGreen(
@@ -743,8 +793,8 @@ class _DeepF18State extends State<DeepF18> {
                           }
                         }
 
-                        dt18.clear();
-                        dc2f18.clear();
+                        dt33T.clear();
+                        dc2R33T.clear();
                       });
                     },
                     icon: const Icon(

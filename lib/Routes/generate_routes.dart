@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/views/Desktop/screens/Edit%20Screen/toshiba/freezer_edit.dart';
+import 'package:warehouse/views/Desktop/screens/Edit%20Screen/toshiba/refrigator_edit.dart';
 import '../views/Desktop/screens/common factor/freezer.dart';
 import '../views/Desktop/screens/common factor/halfe_washe.dart';
 import '../views/Desktop/screens/common factor/refrigerator.dart';
@@ -46,6 +47,9 @@ class RutesManager {
         return MaterialPageRoute(builder: (ctx) => const FreezerToshibaEdit());
       case Routes.toshibaMaobile:
         return MaterialPageRoute(builder: (ctx) => const ToshipaMobile());
+      case Routes.RefrigatorToshipaEdit:
+        return MaterialPageRoute(
+            builder: (ctx) => const RefrigatorToshipaEdit());
     }
     return MaterialPageRoute(builder: (ctx) => const MenuScreen());
   }

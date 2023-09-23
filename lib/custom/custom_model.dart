@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+// ignore: must_be_immutable
 class ItemModelData extends StatelessWidget {
   String modelName;
   String modelColorOne;
@@ -21,24 +23,22 @@ class ItemModelData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double W = MediaQuery.of(context).size.width;
-    double H = MediaQuery.of(context).size.height;
     return Row(
       children: [
         // **************** Model Name Container *******************
         Container(
-          width: W / 3,
-          height: H / 15,
+          width: 120.w,
+          height: 30.h,
           decoration: BoxDecoration(
               border:
                   Border.all(style: BorderStyle.solid, color: Colors.black)),
           child: Center(
             child: Text(
               modelName,
-              style: const TextStyle(
-                  fontSize: 20,
+              style: TextStyle(
+                  fontSize: 6.sp,
                   color: Colors.black,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w400),
             ),
           ),
         ),
@@ -46,18 +46,18 @@ class ItemModelData extends StatelessWidget {
         // ***************  Model Quntaty Container  ******************
 
         Container(
-          width: W / 3,
-          height: H / 15,
+          width: 120.w,
+          height: 30.h,
           decoration: BoxDecoration(
               border:
                   Border.all(style: BorderStyle.solid, color: Colors.black)),
           child: Center(
             child: Text(
               '$totalQuantaty',
-              style: const TextStyle(
-                  fontSize: 20,
+              style: TextStyle(
+                  fontSize: 5.sp,
                   color: Colors.black,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w400),
             ),
           ),
         ),
@@ -65,31 +65,32 @@ class ItemModelData extends StatelessWidget {
         //  *****************  Color Item Container **************
 
         Container(
-            width: W / 3,
-            height: H / 15,
+            width: 120.w,
+            height: 30.h,
             decoration: BoxDecoration(
                 border:
                     Border.all(style: BorderStyle.solid, color: Colors.black)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+                SizedBox(width: 20.w),
                 // ___________ Avilabel color Numbers _________
                 Center(
                   child: Text(
-                    '$modelColorOne : $colorOneQuantaty',
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    '$colorOneQuantaty',
+                    style: TextStyle(
+                        fontSize: 5.sp,
+                        fontWeight: FontWeight.w400,
                         color: Colors.black),
                   ),
                 ),
                 // ___________  contiue Avilabel color Numbers __________
                 Center(
                   child: Text(
-                    '$modelColorTwo : $colorTwoQuantaty',
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    '$colorTwoQuantaty',
+                    style: TextStyle(
+                        fontSize: 5.sp,
+                        fontWeight: FontWeight.w400,
                         color: Colors.black),
                   ),
                 ),

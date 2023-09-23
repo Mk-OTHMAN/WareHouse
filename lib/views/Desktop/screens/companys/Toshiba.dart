@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/custom/custom_outlinebutton.dart';
@@ -35,74 +36,71 @@ class Toshipa extends StatelessWidget {
         body: Row(
           children: [
             SizedBox(
-              width: W * .4,
-              height: H * .5,
+              width: 170.w,
+              height: 400.h,
               child: Lottie.asset('Assets/lottie/Sun.json'),
             ),
             // __________ Column for outline Button items __________
-            Container(
-              padding: EdgeInsets.only(top: H * .07),
-              child: Column(
-                children: [
-                  SizedBox(height: H * .002),
-                  Text(
-                    'Toshiba',
-                    style: GoogleFonts.laila(
-                        color: Colors.black,
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: H * .08),
-                  // ________ item 1 < freezer > ___________
-                  CustomOutlineButton(
-                      buttonName: 'Freezer',
-                      pagePath: Routes.freezer,
-                      buttonColor: Colors.white,
-                      fontSize: 20,
-                      fontColor: Colors.white,
-                      width: W * .1,
-                      height: H * .05),
-                  SizedBox(
-                    height: H * .05,
-                  ),
+            Column(
+              children: [
+                SizedBox(height: 50.h),
+                Text(
+                  'Toshiba',
+                  style: GoogleFonts.laila(
+                      color: Colors.black,
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 30.h),
+                // ________ item 1 < freezer > ___________
+                CustomOutlineButton(
+                    buttonName: 'Freezer',
+                    pagePath: Routes.freezer,
+                    buttonColor: Colors.white,
+                    fontSize: 5.sp,
+                    fontColor: Colors.white,
+                    width: 40.w,
+                    height: 30.h),
+                SizedBox(
+                  height: 20.h,
+                ),
 
-                  // ________ item 2 < Refrigerato > ___________
-                  CustomOutlineButton(
-                      buttonName: 'Refrigerator',
-                      pagePath: Routes.refrigerator,
-                      buttonColor: Colors.white,
-                      fontSize: 20,
-                      fontColor: Colors.white,
-                      width: W * .2,
-                      height: H * .05),
-                  SizedBox(
-                    height: H * .05,
-                  ),
+                // ________ item 2 < Refrigerato > ___________
+                CustomOutlineButton(
+                    buttonName: 'Refrigerator',
+                    pagePath: Routes.refrigerator,
+                    buttonColor: Colors.white,
+                    fontSize: 5.sp,
+                    fontColor: Colors.white,
+                    width: 60.w,
+                    height: 30.h),
+                SizedBox(
+                  height: 20.h,
+                ),
 
-                  // ________ item 3 < Top Washe > ___________
-                  CustomOutlineButton(
-                      buttonName: 'Top Washe',
-                      pagePath: Routes.topWashe,
-                      buttonColor: Colors.white,
-                      fontSize: 20,
-                      fontColor: Colors.white,
-                      width: W * .2,
-                      height: H * .05),
-                  SizedBox(
-                    height: H * .05,
-                  ),
+                // ________ item 3 < Top Washe > ___________
+                CustomOutlineButton(
+                    buttonName: 'Top Washe',
+                    pagePath: Routes.topWashe,
+                    buttonColor: Colors.white,
+                    fontSize: 5.sp,
+                    fontColor: Colors.white,
+                    width: 60.w,
+                    height: 30.h),
+                SizedBox(
+                  height: 20.h,
+                ),
 
-                  // ________ item 3 < Half Washe > ___________
-                  CustomOutlineButton(
-                      buttonName: 'Half Washe',
-                      pagePath: Routes.halfeWashe,
-                      buttonColor: Colors.white,
-                      fontSize: 20,
-                      fontColor: Colors.white,
-                      width: W * .2,
-                      height: H * .05),
-                ],
-              ),
+                // ________ item 3 < Half Washe > ___________
+                CustomOutlineButton(
+                    buttonName: 'Half Washe',
+                    pagePath: Routes.halfeWashe,
+                    buttonColor: Colors.white,
+                    fontSize: 5.sp,
+                    fontColor: Colors.white,
+                    width: 60.w,
+                    height: 30.h),
+              ],
             ),
           ],
         ));

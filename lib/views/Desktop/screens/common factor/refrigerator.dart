@@ -1,4 +1,8 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/custom/custom_model.dart';
 import 'package:warehouse/custom/header_tabel.dart';
 
@@ -10,21 +14,43 @@ class RefrigeratorScreen extends StatefulWidget {
 }
 
 class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
+  Box data = Hive.box('data');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.indigo,
+        bottomNavigationBar: CurvedNavigationBar(
+            height: 40.h,
+            buttonBackgroundColor: Colors.white70,
+            color: Colors.blue,
+            backgroundColor: Colors.white,
+            onTap: (value) {
+              setState(() {
+                if (value == 1) {
+                  Navigator.of(context).pushNamed(Routes.home);
+                } else if (value == 0) {
+                  Navigator.of(context).pushNamed(Routes.toshiba);
+                } else if (value == 2) {
+                  Navigator.of(context).pushNamed(Routes.RefrigatorToshipaEdit);
+                }
+              });
+            },
+            items: const [
+              Icon(Icons.arrow_back_ios),
+              Icon(Icons.home),
+              Icon(Icons.edit),
+            ]),
+        backgroundColor: Colors.white,
         body: ListView(
           children: [
             const CustomHeaderTabel(),
             // ______________ 33T Model ______________
             ItemModelData(
                 modelName: 'Toshiba 33T',
-                totalQuantaty: 0,
+                totalQuantaty: data.get('total33T'),
                 modelColorOne: 'SL',
                 modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
+                colorOneQuantaty: data.get('33Tcolor1'),
+                colorTwoQuantaty: data.get('33Tcolor2')),
 
             //  ________________ 37  _____________________
 
