@@ -180,23 +180,23 @@ class _Tosh33tState extends State<Tosh33t> {
                 Row(
                   children: [
                     Expanded(
-                      child: Form(
-                        key: formkey,
-                        child: Column(
-                          children: [
-                            Text(
-                              'total Quantity',
-                              style: GoogleFonts.eduSaBeginner(
-                                  color: Colors.black,
-                                  fontSize: 7.sp,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            //  ######  sizedBox  ########
-                            SizedBox(height: 15.h),
-                            //  ______tetxt form field  ______ //
-                            SizedBox(
-                              // height: 50,
-                              width: 30.w,
+                      child: Column(
+                        children: [
+                          Text(
+                            'total Quantity',
+                            style: GoogleFonts.eduSaBeginner(
+                                color: Colors.black,
+                                fontSize: 7.sp,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          //  ######  sizedBox  ########
+                          SizedBox(height: 15.h),
+                          //  ______tetxt form field  ______ //
+                          SizedBox(
+                            // height: 50,
+                            width: 30.w,
+                            child: Form(
+                              key: formkey,
                               child: TextFormField(
                                   validator: (value) {
                                     if (value!.isEmpty) {
@@ -221,8 +221,8 @@ class _Tosh33tState extends State<Tosh33t> {
                                     )),
                                   )),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
 
