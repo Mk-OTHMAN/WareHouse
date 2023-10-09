@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-import 'package:warehouse/custom/custom_model.dart';
+import 'package:warehouse/custom/item_model_data.dart';
 import 'package:warehouse/custom/header_tabel.dart';
 
 class FreezerScreen extends StatefulWidget {

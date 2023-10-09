@@ -4,9 +4,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
+<<<<<<< HEAD
 import 'package:warehouse/buttomsheet/deep_18.dart';
 import 'package:warehouse/buttomsheet/deep_22.dart';
 import 'package:warehouse/buttomsheet/toshiba33T.dart';
+=======
+import 'package:warehouse/buttomsheet/add_deep18.dart';
+import 'package:warehouse/buttomsheet/add_deep22.dart';
+import 'package:warehouse/buttomsheet/sell_tosiba33T.dart';
+import 'package:warehouse/buttomsheet/add_toshiba33T.dart';
+import 'package:warehouse/custom/custom_add_sell_row.dart';
+>>>>>>> 7caeef1c850326ab280d9ad491894c0fec9b0fb8
 
 class RefrigatorToshipaEdit extends StatefulWidget {
   const RefrigatorToshipaEdit({super.key});
@@ -65,247 +73,98 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                   child: Lottie.asset('Assets/lottie/down.json'),
                 ),
                 // _________- list text on left side ___________
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const Tosh33t();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 33T',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    // ___________ secondtext ____________
-                    TextButton(
-                        onPressed: () {
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF18();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 37',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    SizedBox(height: 7.h),
-                    //! _______  37J ____________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 37J',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //!     _______ 40PT ________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 40PT',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //!    __________  40PR _________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 40PR',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //! _________  40PJ  __________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 40PJ',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //! _________  40PH  __________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 40PH',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //!  __________    45  __________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 45',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //!  _______ 51  ______
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 51',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                    //!   _________   56  __________
-                    TextButton(
-                        onPressed: () {
-                          // ## Buttomsheet ..........
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return const DeepF22();
-                              },
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    topRight: Radius.circular(100)),
-                              ));
-                        },
-                        child: Text(
-                          'Toshiba 56',
-                          style: TextStyle(
-                              fontSize: 5.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        )),
-                    // _________ sizedBox __________
-                    SizedBox(height: 7.h),
-                  ],
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 25),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba33T',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          // _________ sizedBox __________
+                          SizedBox(height: 1.h),
+                          //! ___________ 37 ____________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba37',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //! _______  37J ____________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba37J',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //!     _______ 40PT ________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Tosiba40PT',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //!   __________  40PR ________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba40PR',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //! _________  40PJ  __________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba40PJ',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //! _________  40PH  __________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba40PH',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //!  __________    45  __________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba45',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //!  _______ 51  ______
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba51',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                          //!   _________   56  __________
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              modelName: 'Toshiba56',
+                              iconShape1: Icons.download,
+                              iconSape2: Icons.upload),
+                          SizedBox(height: 2.h),
+                        ],
+                      ),
+                    ),
+                  ),
                 )
               ]),
             )),

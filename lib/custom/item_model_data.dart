@@ -28,7 +28,7 @@ class ItemModelData extends StatelessWidget {
         // **************** Model Name Container *******************
         Container(
           width: 120.w,
-          height: 30.h,
+          height: 50.h,
           decoration: BoxDecoration(
               border:
                   Border.all(style: BorderStyle.solid, color: Colors.black)),
@@ -47,7 +47,7 @@ class ItemModelData extends StatelessWidget {
 
         Container(
           width: 120.w,
-          height: 30.h,
+          height: 50.h,
           decoration: BoxDecoration(
               border:
                   Border.all(style: BorderStyle.solid, color: Colors.black)),
@@ -66,7 +66,7 @@ class ItemModelData extends StatelessWidget {
 
         Container(
             width: 120.w,
-            height: 30.h,
+            height: 50.h,
             decoration: BoxDecoration(
                 border:
                     Border.all(style: BorderStyle.solid, color: Colors.black)),
