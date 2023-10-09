@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-import 'package:warehouse/custom/buttomsheet/deep_18.dart';
-import 'package:warehouse/custom/buttomsheet/deep_22.dart';
+import 'package:warehouse/buttomsheet/deep_18.dart';
+import 'package:warehouse/buttomsheet/deep_22.dart';
 
 class FreezerToshibaEdit extends StatefulWidget {
   const FreezerToshibaEdit({super.key});
