@@ -12,6 +12,7 @@ class Routes {
   static const topWashe = '/topWashe';
   static const halfeWashe = '/halfeWashe';
   static const freezerToshipaEdit = '/FTedit';
-  static const RefrigatorToshipaEdit = '/RTedit';
+  static const refrigatorToshipaEdit = '/RTedit';
   static const toshibaMaobile = 'tosibaMobile';
+  static const halfeWasheToshibaEdit = '/halfeWasheToshibaEdit';
 }

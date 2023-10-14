@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-import 'package:warehouse/custom/item_model_data.dart';
-import 'package:warehouse/custom/header_tabel.dart';
+import 'package:warehouse/custom/table/row_data._modelName.dart';
+import 'package:warehouse/custom/table/row_data_keyBoxName.dart';
+import 'package:warehouse/custom/table/table_body.dart';
+import 'package:warehouse/custom/table/table_header.dart';
 
 class RefrigeratorScreen extends StatefulWidget {
   const RefrigeratorScreen({super.key});
@@ -30,7 +32,7 @@ class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
                 } else if (value == 0) {
                   Navigator.of(context).pushNamed(Routes.toshiba);
                 } else if (value == 2) {
-                  Navigator.of(context).pushNamed(Routes.RefrigatorToshipaEdit);
+                  Navigator.of(context).pushNamed(Routes.refrigatorToshipaEdit);
                 }
               });
             },
@@ -42,105 +44,92 @@ class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
         backgroundColor: Colors.white,
         body: ListView(
           children: [
-            const CustomHeaderTabel(),
-            // ______________ 33T Model ______________
-            ItemModelData(
-                modelName: 'Toshiba 33T',
-                totalQuantaty: data.get('total33T'),
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: data.get('33Tcolor1'),
-                colorTwoQuantaty: data.get('33Tcolor2')),
-
-            //  ________________ 37  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 37',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 37J  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 37J',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  _____________ 40PT ________________
-
-            ItemModelData(
-                modelName: 'Toshiba 40PT',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 40PR  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 40PR',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 40PJ  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 40PJ',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 40PH  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 40PH',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 45  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 45',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 51  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 51',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
-
-            //  ________________ 56  _____________________
-
-            ItemModelData(
-                modelName: 'Toshiba 56',
-                totalQuantaty: 0,
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: 0,
-                colorTwoQuantaty: 0),
+            const TableHeader(),
+            //! ______  ref 33T  _____
+            TableBody(
+                modelName: const RowDataModelName(componentName: 'Toshiba 33T'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total33T').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('33Tcolor1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('33Tcolor2').toString())),
+            //!  ________  ref 37  ___________
+            TableBody(
+                modelName: const RowDataModelName(componentName: 'Toshiba 37'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total37').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('37color1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('37color2').toString())),
+            //! ________  ref 37J  ____________
+            TableBody(
+                modelName: const RowDataModelName(componentName: 'Toshiba 37J'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total37J').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('37Jcolor1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('37Jcolor2').toString())),
+            //! ________ ref 40pt __________
+            TableBody(
+                modelName:
+                    const RowDataModelName(componentName: 'Toshiba 40PT'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total40pt').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('40ptcolor1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('40ptcolor2').toString())),
+            //!  __________  ref 40pr  ______________
+            TableBody(
+                modelName:
+                    const RowDataModelName(componentName: 'Toshiba 40PR'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total40pr').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('40prcolor1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('40prcolor2').toString())),
+            //!  __________  ref 40pj ______________
+            TableBody(
+                modelName:
+                    const RowDataModelName(componentName: 'Toshiba 40PJ'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total40pj').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('40pjcolor1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('40pjcolor2').toString())),
+            //!  __________  ref 40ph ______________
+            TableBody(
+                modelName:
+                    const RowDataModelName(componentName: 'Toshiba 40PH'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total40ph').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('40phcolor1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('40phcolor2').toString())),
+            //!  __________  ref 51 ______________
+            TableBody(
+                modelName: const RowDataModelName(componentName: 'Toshiba 51'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total51').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('51color1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('51color2').toString())),
+            //!  __________  ref 56 ______________
+            TableBody(
+                modelName: const RowDataModelName(componentName: 'Toshiba 56'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total56').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('56color1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('56color2').toString())),
           ],
         ));
   }

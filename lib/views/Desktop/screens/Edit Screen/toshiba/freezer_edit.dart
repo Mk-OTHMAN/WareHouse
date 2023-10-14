@@ -4,10 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-import 'package:warehouse/buttomsheet/add_deep18.dart';
-import 'package:warehouse/buttomsheet/add_deep22.dart';
-import 'package:warehouse/buttomsheet/sell_deep18.dart';
-import 'package:warehouse/buttomsheet/sell_deep22.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Freezer/Add/add_deep18.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Freezer/Add/add_deep22.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Freezer/Sell/sell_deep18.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Freezer/Sell/sell_deep22.dart';
 import 'package:warehouse/custom/custom_add_sell_row.dart';
 
 class FreezerToshibaEdit extends StatefulWidget {
@@ -67,19 +67,19 @@ class _FreezerToshibaEditState extends State<FreezerToshibaEdit> {
                   child: Lottie.asset('Assets/lottie/down.json'),
                 ),
                 // _________- list text on left side ___________
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
+                const Padding(
+                  padding: EdgeInsets.only(left: 25),
                   child: Column(
                     children: [
                       AddSellRow(
-                          addShowButtomSheetName: const AddDeep18(),
-                          sellShowButtomSheetName: const SellDeep18(),
+                          addShowButtomSheetName: AddDeep18(),
+                          sellShowButtomSheetName: SellDeep18(),
                           modelName: 'Freezer18',
                           iconShape1: Icons.download,
                           iconSape2: Icons.upload),
                       AddSellRow(
-                          addShowButtomSheetName: const AddDeep22(),
-                          sellShowButtomSheetName: const SellDeep22(),
+                          addShowButtomSheetName: AddDeep22(),
+                          sellShowButtomSheetName: SellDeep22(),
                           modelName: 'Freezer22',
                           iconShape1: Icons.download,
                           iconSape2: Icons.upload)
