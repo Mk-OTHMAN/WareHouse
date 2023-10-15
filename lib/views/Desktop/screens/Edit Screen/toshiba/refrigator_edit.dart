@@ -9,7 +9,11 @@ import 'package:warehouse/buttomsheet/add_toshiba33T.dart';
 import 'package:warehouse/custom/custom_add_sell_row.dart';
 
 class RefrigatorToshipaEdit extends StatefulWidget {
+<<<<<<< HEAD
   const RefrigatorToshipaEdit({super.key});
+=======
+  const RefrigatorToshipaEdit({super.key}); 
+>>>>>>> 8251fe7 (check)
   @override
   State<RefrigatorToshipaEdit> createState() => _RefrigatorToshipaEditState();
 }
