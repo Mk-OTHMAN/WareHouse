@@ -90,28 +90,40 @@ class _SellW1210spState extends State<SellW1210sp> {
                 //! _________    total quantity ________
                 Expanded(
 <<<<<<< HEAD
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
 =======
                     child: component_buttom_sheet(
 >>>>>>> 6359593 (create half washer files)
+=======
+                    child: ComponentButtomSheet(
+>>>>>>> 6e95ed1 (some editing)
                         componentName: 'Total Quantity',
                         textController: deletetotal1210sp)),
                 //!  ________  sl quantity  ___________
                 Expanded(
 <<<<<<< HEAD
-                    child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-                        componentName: 'SL Quantity',
-                        textController: delete1210spcolor1)),
-                //! ______________  ch quantity  __________
-                Expanded(
 <<<<<<< HEAD
                     child: ComponentButtomSheet(
 =======
                     child: component_buttom_sheet(
 >>>>>>> 6359593 (create half washer files)
+=======
+                    child: ComponentButtomSheet(
+>>>>>>> 6e95ed1 (some editing)
+                        componentName: 'SL Quantity',
+                        textController: delete1210spcolor1)),
+                //! ______________  ch quantity  __________
+                Expanded(
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
+=======
+                    child: ComponentButtomSheet(
+>>>>>>> 6e95ed1 (some editing)
                         componentName: 'CH Quantity',
                         textController: delete1210spcolor2))
               ],

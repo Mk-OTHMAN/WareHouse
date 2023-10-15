@@ -99,20 +99,28 @@ class _AddRef40pjState extends State<AddRef40pj> {
                     //! ____________  total quantity  __________
                     Expanded(
 <<<<<<< HEAD
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
 =======
                       child: component_buttom_sheet(
 >>>>>>> 6359593 (create half washer files)
+=======
+                      child: ComponentButtomSheet(
+>>>>>>> 6e95ed1 (some editing)
                           componentName: 'Total Quantity',
                           textController: total40pj),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
 <<<<<<< HEAD
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
 =======
                       child: component_buttom_sheet(
 >>>>>>> 6359593 (create half washer files)
+=======
+                      child: ComponentButtomSheet(
+>>>>>>> 6e95ed1 (some editing)
                           componentName: 'SL Quantity',
                           textController: r40pjcolor1),
                     ),
@@ -120,10 +128,14 @@ class _AddRef40pjState extends State<AddRef40pj> {
                     //! _____________ ch quantity  ______________
                     Expanded(
 <<<<<<< HEAD
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
 =======
                       child: component_buttom_sheet(
 >>>>>>> 6359593 (create half washer files)
+=======
+                      child: ComponentButtomSheet(
+>>>>>>> 6e95ed1 (some editing)
                           componentName: 'CH Quantity',
                           textController: r40pjcolor2),
                     )
