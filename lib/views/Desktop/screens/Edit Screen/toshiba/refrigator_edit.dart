@@ -6,11 +6,15 @@ import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 6359593 (create half washer files)
 =======
 >>>>>>> 60bde77 (test)
+=======
+
+>>>>>>> e19cb02 (create half washer files)
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_51.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_56.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref37J.dart';
@@ -31,7 +35,10 @@ import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref40pt.dart'
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref45.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_toshiba37.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_tosiba33T.dart';
+<<<<<<< HEAD
 import 'package:warehouse/custom/custom_add_sell_row.dart';
+=======
+>>>>>>> e19cb02 (create half washer files)
 
 class RefrigatorToshipaEdit extends StatefulWidget {
   const RefrigatorToshipaEdit({super.key});
