@@ -89,17 +89,17 @@ class _SellRef51State extends State<SellRef51> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'Total Quantity',
                         textController: deletetotal51)),
                 //!  ________  sl quantity  ___________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'SL Quantity',
                         textController: delete51color1)),
                 //! ______________  ch quantity  __________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'CH Quantity',
                         textController: delete51color2))
               ],

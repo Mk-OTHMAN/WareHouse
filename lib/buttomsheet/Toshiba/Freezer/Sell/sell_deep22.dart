@@ -72,20 +72,20 @@ class _SellDeep22State extends State<SellDeep22> {
             Row(
               children: [
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'Total Quantity',
                         textController: deleteFreezer22Quantaty)),
 
                 //  ########### column color quantaty #########
 
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'SL Quantity',
                         textController: deleteFreezer22Color1Quntaty)),
 
                 // ############## column coolor quantaty ########
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'CH Quantity',
                         textController: deleteFreezer22Color2Quantaty))
               ],

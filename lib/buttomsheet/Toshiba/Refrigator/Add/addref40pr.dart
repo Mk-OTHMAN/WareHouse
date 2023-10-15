@@ -98,20 +98,20 @@ class _AddRef40prState extends State<AddRef40pr> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'Total Quantity',
                           textController: total40pr),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'SL Quantity',
                           textController: r40prcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'CH Quantity',
                           textController: r40prcolor2),
                     )

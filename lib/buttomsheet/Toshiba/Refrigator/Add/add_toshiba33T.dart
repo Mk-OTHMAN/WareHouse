@@ -98,20 +98,20 @@ class _Tosh33tState extends State<Tosh33t> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'Total Quantity',
                           textController: total33T),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'SL Quantity',
                           textController: r33Tcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'CH Quantity',
                           textController: r33Tcolor2),
                     )

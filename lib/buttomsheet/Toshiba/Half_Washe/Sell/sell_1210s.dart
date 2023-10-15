@@ -89,17 +89,17 @@ class _SellW1210sState extends State<SellW1210s> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'Total Quantity',
                         textController: deletetotal1210s)),
                 //!  ________  sl quantity  ___________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'SL Quantity',
                         textController: delete1210scolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'CH Quantity',
                         textController: delete1210scolor2))
               ],

@@ -89,17 +89,17 @@ class _SellW720PState extends State<SellW720P> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'Total Quantity',
                         textController: deletetotal720p)),
                 //!  ________  sl quantity  ___________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'SL Quantity',
                         textController: delete720pcolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'CH Quantity',
                         textController: delete720pcolor2))
               ],

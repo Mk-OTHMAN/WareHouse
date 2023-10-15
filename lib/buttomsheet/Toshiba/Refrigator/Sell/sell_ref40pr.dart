@@ -89,17 +89,17 @@ class _SellRef40prState extends State<SellRef40pr> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'Total Quantity',
                         textController: deletetotal40pr)),
                 //!  ________  sl quantity  ___________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'SL Quantity',
                         textController: delete40prcolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'CH Quantity',
                         textController: delete40prcolor2))
               ],

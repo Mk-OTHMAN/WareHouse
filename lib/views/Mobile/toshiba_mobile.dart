@@ -1,6 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/custom/custom_outlinebutton.dart';
 import 'package:lottie/lottie.dart';

@@ -98,20 +98,20 @@ class _AddWsher720State extends State<AddWsher720> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'Total Quantity',
                           textController: total720),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'SL Quantity',
                           textController: w720color1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'CH Quantity',
                           textController: w720color2),
                     )

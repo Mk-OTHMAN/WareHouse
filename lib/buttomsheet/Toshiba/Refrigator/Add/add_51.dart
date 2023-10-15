@@ -98,20 +98,20 @@ class _AddRef51State extends State<AddRef51> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'Total Quantity',
                           textController: total51),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'SL Quantity',
                           textController: r51color1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'CH Quantity',
                           textController: r51color2),
                     )

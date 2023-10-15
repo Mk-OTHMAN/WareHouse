@@ -78,18 +78,18 @@ class _AddDeep22State extends State<AddDeep22> {
                 Row(
                   children: [
                     Expanded(
-                        child: component_buttom_sheet(
+                        child: ComponentButtomSheet(
                             componentName: 'Total Quantity',
                             textController: freezer22Quntaty)),
                     // ! ________ sl quantity _________
                     Expanded(
-                        child: component_buttom_sheet(
+                        child: ComponentButtomSheet(
                             componentName: 'SL Quantity',
                             textController: frezzer22Color1Quantaty)),
 
                     //! _______  ch quantity __________
                     Expanded(
-                        child: component_buttom_sheet(
+                        child: ComponentButtomSheet(
                             componentName: 'CH Quantity',
                             textController: freezer22Color2Quantaty))
                   ],
