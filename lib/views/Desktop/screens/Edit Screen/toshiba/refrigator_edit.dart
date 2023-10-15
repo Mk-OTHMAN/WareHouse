@@ -5,9 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 6359593 (create half washer files)
+=======
+>>>>>>> 60bde77 (test)
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_51.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_56.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref37J.dart';

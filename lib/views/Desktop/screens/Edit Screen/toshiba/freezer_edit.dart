@@ -5,14 +5,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 6359593 (create half washer files)
+=======
+>>>>>>> 60bde77 (test)
 import 'package:warehouse/buttomsheet/Toshiba/Freezer/Add/add_deep18.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Freezer/Add/add_deep22.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Freezer/Sell/sell_deep18.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Freezer/Sell/sell_deep22.dart';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60bde77 (test)
 import 'package:warehouse/custom/custom_add_sell_row.dart';
 
 class FreezerToshibaEdit extends StatefulWidget {
