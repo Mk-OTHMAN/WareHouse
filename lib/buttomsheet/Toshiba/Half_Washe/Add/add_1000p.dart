@@ -42,7 +42,11 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
       data.put('1000pcolor2', 0);
     }
 
+<<<<<<< HEAD
     //! ===================  Function For ShowDialog ===========================
+=======
+    //! ===================  Function For ShowDialog ===============================
+>>>>>>> 6359593 (create half washer files)
     void showDialogFunction(String title, String contetnt, String lottiPath) {
       showDialog(
           context: context,
@@ -98,20 +102,32 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'Total Quantity',
                           textController: total1000p),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'SL Quantity',
                           textController: w1000pcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'CH Quantity',
                           textController: w1000pcolor2),
                     )

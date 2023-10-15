@@ -89,17 +89,29 @@ class _SellRef40prState extends State<SellRef40pr> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'Total Quantity',
                         textController: deletetotal40pr)),
                 //!  ________  sl quantity  ___________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'SL Quantity',
                         textController: delete40prcolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'CH Quantity',
                         textController: delete40prcolor2))
               ],

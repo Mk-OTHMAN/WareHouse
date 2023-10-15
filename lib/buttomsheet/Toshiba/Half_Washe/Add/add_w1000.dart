@@ -98,20 +98,32 @@ class _AddWsher1000State extends State<AddWsher1000> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'Total Quantity',
                           textController: total1000),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'SL Quantity',
                           textController: w1000color1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'CH Quantity',
                           textController: w1000color2),
                     )

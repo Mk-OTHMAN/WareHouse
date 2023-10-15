@@ -98,20 +98,32 @@ class _AddRef37JState extends State<AddRef37J> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'Total Quantity',
                           textController: total37J),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'SL Quantity',
                           textController: r37Jcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'CH Quantity',
                           textController: r37Jcolor2),
                     )

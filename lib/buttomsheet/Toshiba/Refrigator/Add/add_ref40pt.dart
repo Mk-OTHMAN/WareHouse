@@ -98,20 +98,32 @@ class _AddRef40ptState extends State<AddRef40pt> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'Total Quantity',
                           textController: total40pt),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'SL Quantity',
                           textController: r40ptcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
+<<<<<<< HEAD
                       child: ComponentButtomSheet(
+=======
+                      child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                           componentName: 'CH Quantity',
                           textController: r40ptcolor2),
                     )

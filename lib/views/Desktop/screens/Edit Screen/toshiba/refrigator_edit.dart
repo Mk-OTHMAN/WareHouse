@@ -4,7 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6359593 (create half washer files)
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_51.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_56.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref37J.dart';
@@ -91,82 +94,142 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: Tosh33t(),
                               sellShowButtomSheetName: SellToshiba33T(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const Tosh33t(),
+                              sellShowButtomSheetName: const SellToshiba33T(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba33T',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           // _________ sizedBox __________
                           SizedBox(height: 1.h),
                           //! ___________ 37 ____________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef37(),
                               sellShowButtomSheetName: SellRef37(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef37(),
+                              sellShowButtomSheetName: const SellRef37(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba37',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //! _______  37J ____________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef37J(),
                               sellShowButtomSheetName: SellRef37J(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef37J(),
+                              sellShowButtomSheetName: const SellRef37J(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba37J',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!     _______ 40PT ________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40pt(),
                               sellShowButtomSheetName: SellRef40pt(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef40pt(),
+                              sellShowButtomSheetName: const SellRef40pt(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Tosiba40PT',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!   __________  40PR ________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40pr(),
                               sellShowButtomSheetName: SellRef40pr(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef40pr(),
+                              sellShowButtomSheetName: const SellRef40pr(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba40PR',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //! _________  40PJ  __________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40pj(),
                               sellShowButtomSheetName: SellRef40pj(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef40pj(),
+                              sellShowButtomSheetName: const SellRef40pj(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba40PJ',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //! _________  40PH  __________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40ph(),
                               sellShowButtomSheetName: SellRef40ph(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef40ph(),
+                              sellShowButtomSheetName: const SellRef40ph(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba40PH',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!  __________    45  __________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef45(),
                               sellShowButtomSheetName: SellRef45(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef45(),
+                              sellShowButtomSheetName: const SellRef45(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba45',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!  _______ 51  ______
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef51(),
                               sellShowButtomSheetName: SellRef51(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef51(),
+                              sellShowButtomSheetName: const SellRef51(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba51',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!   _________   56  __________
+<<<<<<< HEAD
                           const AddSellRow(
                               addShowButtomSheetName: AddRef56(),
                               sellShowButtomSheetName: SellRef56(),
+=======
+                          AddSellRow(
+                              addShowButtomSheetName: const AddRef56(),
+                              sellShowButtomSheetName: const SellRef56(),
+>>>>>>> 6359593 (create half washer files)
                               modelName: 'Toshiba56',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),

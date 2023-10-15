@@ -89,17 +89,29 @@ class _SellRef51State extends State<SellRef51> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'Total Quantity',
                         textController: deletetotal51)),
                 //!  ________  sl quantity  ___________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'SL Quantity',
                         textController: delete51color1)),
                 //! ______________  ch quantity  __________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'CH Quantity',
                         textController: delete51color2))
               ],

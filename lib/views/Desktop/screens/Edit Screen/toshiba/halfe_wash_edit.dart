@@ -4,6 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
+<<<<<<< HEAD
+=======
+import 'package:warehouse/buttomsheet/Toshiba/Freezer/Add/add_deep22.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Freezer/Sell/sell_deep22.dart';
+>>>>>>> 6359593 (create half washer files)
 import 'package:warehouse/buttomsheet/Toshiba/Half_Washe/Add/add_1000p.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Half_Washe/Add/add_1210s.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Half_Washe/Add/add_1210sp.dart';

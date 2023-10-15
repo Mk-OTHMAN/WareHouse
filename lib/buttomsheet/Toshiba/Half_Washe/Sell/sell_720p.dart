@@ -89,17 +89,29 @@ class _SellW720PState extends State<SellW720P> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'Total Quantity',
                         textController: deletetotal720p)),
                 //!  ________  sl quantity  ___________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'SL Quantity',
                         textController: delete720pcolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
+<<<<<<< HEAD
                     child: ComponentButtomSheet(
+=======
+                    child: component_buttom_sheet(
+>>>>>>> 6359593 (create half washer files)
                         componentName: 'CH Quantity',
                         textController: delete720pcolor2))
               ],
