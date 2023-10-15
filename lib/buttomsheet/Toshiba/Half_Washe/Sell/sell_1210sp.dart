@@ -3,40 +3,41 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:lottie/lottie.dart';
+import 'package:warehouse/custom/component_bottom_sheet.dart';
 
-import '../custom/component_bottom_sheet.dart';
-
-class Sell_Toshiba33T extends StatefulWidget {
-  const Sell_Toshiba33T({super.key});
+class SellW1210sp extends StatefulWidget {
+  const SellW1210sp({super.key});
 
   @override
-  State<Sell_Toshiba33T> createState() => _Sell_Toshiba33TState();
+  State<SellW1210sp> createState() => _SellW1210spState();
 }
 
-class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
+class _SellW1210spState extends State<SellW1210sp> {
   @override
   Widget build(BuildContext context) {
     Box data = Hive.box('data');
-    int valueDeleteQuantaty33T = 0;
-    int valueDelete33TColor1 = 0;
-    int valueDelete33TColor2 = 0;
-    int dtotal33T = 0;
-    int d33Tcolor1 = 0;
-    int d33Tcolor2 = 0;
-    TextEditingController deletetotal33T = TextEditingController();
-    TextEditingController delete33Tcolor1 = TextEditingController();
-    TextEditingController delete33Tcolor2 = TextEditingController();
-    var dt33T = deletetotal33T;
-    var dc1R33T = delete33Tcolor1;
-    var dc2R33T = delete33Tcolor2;
-    if (data.get('total33T') == null) {
-      data.put('total33T', 0);
+    //! variables for calculate proccess to data
+    int valueDeleteQuantaty1210sp = 0;
+    int valueDelete1210spColor1 = 0;
+    int valueDelete1210spColor2 = 0;
+    //! variables for parseing proccess at controller
+    int dtotal1210sp = 0;
+    int d1210spcolor1 = 0;
+    int d1210spcolor2 = 0;
+    TextEditingController deletetotal1210sp = TextEditingController();
+    TextEditingController delete1210spcolor1 = TextEditingController();
+    TextEditingController delete1210spcolor2 = TextEditingController();
+    var dt1210sp = deletetotal1210sp;
+    var dc1W1210sp = delete1210spcolor1;
+    var dc2W1210sp = delete1210spcolor2;
+    if (data.get('total1210sp') == null) {
+      data.put('total1210sp', 0);
     }
-    if (data.get('33Tcolor1') == null) {
-      data.put('33Tcolor1', 0);
+    if (data.get('1210spcolor1') == null) {
+      data.put('1210spcolor1', 0);
     }
-    if (data.get('33Tcolor2') == null) {
-      data.put('33Tcolor2', 0);
+    if (data.get('1210spcolor2') == null) {
+      data.put('1210spcolor2', 0);
     }
     void showDialogFunction(String title, String contetnt, String lottiPath) {
       showDialog(
@@ -90,17 +91,17 @@ class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
                 Expanded(
                     child: component_buttom_sheet(
                         componentName: 'Total Quantity',
-                        textController: deletetotal33T)),
+                        textController: deletetotal1210sp)),
                 //!  ________  sl quantity  ___________
                 Expanded(
                     child: component_buttom_sheet(
                         componentName: 'SL Quantity',
-                        textController: delete33Tcolor1)),
+                        textController: delete1210spcolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
                     child: component_buttom_sheet(
                         componentName: 'CH Quantity',
-                        textController: delete33Tcolor2))
+                        textController: delete1210spcolor2))
               ],
             ),
             SizedBox(
@@ -110,73 +111,76 @@ class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
                 onPressed: () {
                   setState(() {
                     // ?__________ check if Quantaty & color 1 & Color 2 Empty _______ //
-                    if (dt33T.text.isEmpty &&
-                        dc1R33T.text.isEmpty &&
-                        dc2R33T.text.isEmpty) {
+                    if (dt1210sp.text.isEmpty &&
+                        dc1W1210sp.text.isEmpty &&
+                        dc2W1210sp.text.isEmpty) {
                       showDialogFunction(
                           'WRONG',
                           'Please Add Quantity And Color , you must add Quantity and at least one color ..!',
                           'Assets/lottie/Robot.json');
                     }
                     // ?_______ chek if recived from user Quantaty only ________ //
-                    else if (dc1R33T.text.isEmpty && dc2R33T.text.isEmpty) {
+                    else if (dc1W1210sp.text.isEmpty &&
+                        dc2W1210sp.text.isEmpty) {
                       showDialogFunction(
                           'WRONG',
                           'you must choose at least one color.',
                           'Assets/lottie/Robot.json');
-                      dt33T.clear();
+                      dt1210sp.clear();
                     }
                     //? __________ check if recived from user color 1 only ________ //
-                    else if (dt33T.text.isEmpty && dc2R33T.text.isEmpty) {
+                    else if (dt1210sp.text.isEmpty && dc2W1210sp.text.isEmpty) {
                       showDialogFunction(
                           'WRONG',
                           "you must choose the Quantity,that's wrong add color only",
                           'Assets/lottie/Robot.json');
-                      dc1R33T.clear();
+                      dc1W1210sp.clear();
                     }
                     // ?________ chek if recived from user color 2 only _________ //
-                    else if (dt33T.text.isEmpty && dc1R33T.text.isEmpty) {
+                    else if (dt1210sp.text.isEmpty && dc1W1210sp.text.isEmpty) {
                       showDialogFunction(
                           'WRONG',
                           "you must choose the Quantity,that's wrong add color only",
                           'Assets/lottie/Robot.json');
-                      dc2R33T.clear();
+                      dc2W1210sp.clear();
                     }
                     // ?_____________ Check if user write input in color 1 and color 2 only _______ //
-                    else if (dt33T.text.isEmpty) {
+                    else if (dt1210sp.text.isEmpty) {
                       showDialogFunction(
                           'WRONG',
                           "you must choose the Quantity,that's wrong add color only",
                           'Assets/lottie/Robot.json');
-                      dc1R33T.clear();
-                      dc2R33T.clear();
+                      dc1W1210sp.clear();
+                      dc2W1210sp.clear();
                     }
 
                     //? _____________ Check All Quantaty And input from User _________ //
-                    else if (data.get('total33T') == 0) {
+                    else if (data.get('total1210sp') == 0) {
                       //! =======> 👀
-                      dtotal33T = int.parse(deletetotal33T.text);
-                      if (dtotal33T > data.get('total33T')) {
+                      dtotal1210sp = int.parse(deletetotal1210sp.text);
+                      if (dtotal1210sp > data.get('total1210sp')) {
                         //! =======> 👀
                         showDialogFunction(
                             'WRONG',
                             '''sorry, the number is greater than the stored quantity, the stored quantity is zero
 ''',
                             'Assets/lottie/Robot.json');
-                        dt33T.clear();
-                        dc1R33T.clear();
+                        dt1210sp.clear();
+                        dc1W1210sp.clear();
                       }
                     }
                     //? ____________ Check Color 1 Quantaty And input frpm User ______________ //
-                    else if (data.get('33Tcolor1') == 0 || d33Tcolor1 > 0) {
+                    else if (data.get('1210spcolor1') == 0 ||
+                        d1210spcolor1 > 0) {
                       //! =======> 👀
                       showDialogFunction(
                           'WRONG',
                           '''sorry, the number is greater than the stored quantity, the stored quantity of color one is zero
 ''',
                           'Assets/lottie/Robot.json');
-                      if (d33Tcolor1 > data.get('33Tcolor1') && //! =======> 👀
-                          data.get('33Tcolor1') > 0) {
+                      if (d1210spcolor1 >
+                              data.get('1210spcolor1') && //! =======> 👀
+                          data.get('1210spcolor1') > 0) {
                         //! =======> 👀
                         showDialogFunction(
                             'WRONG',
@@ -184,18 +188,20 @@ class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
 ''',
                             'Assets/lottie/Robot.json');
                       }
-                      dc1R33T.clear();
+                      dc1W1210sp.clear();
                     }
                     //? ___________ Check Color 2 Quantaty And input from User _____________
-                    else if (data.get('33Tcolor2') == 0 || d33Tcolor1 > 0) {
+                    else if (data.get('1210spcolor2') == 0 ||
+                        d1210spcolor1 > 0) {
                       //! =======> 👀
                       showDialogFunction(
                           'WRONG',
                           '''sorry, the number is greater than the stored quantity, the stored quantity of color two is zero
 ''',
                           'Assets/lottie/Robot.json');
-                      if (d33Tcolor2 > data.get('33Tcolor2') && //! =======> 👀
-                          data.get('33Tcolor2') > 0) {
+                      if (d1210spcolor2 >
+                              data.get('1210spcolor2') && //! =======> 👀
+                          data.get('1210spcolor2') > 0) {
                         //! =======> 👀
                         showDialogFunction(
                             'WRONG',
@@ -205,79 +211,83 @@ class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
                       }
                     }
                     //! __________________  case delete at one time 3*1 _________
-                    else if (dt33T.text.isNotEmpty &&
-                        dc1R33T.text.isNotEmpty &&
-                        dc2R33T.text.isNotEmpty) {
-                      dtotal33T = int.parse(dt33T.text);
-                      d33Tcolor1 = int.parse(dc1R33T.text);
-                      d33Tcolor2 = int.parse(dc2R33T.text);
-                      if (dtotal33T > data.get('total33T') && //! =======> 👀
-                              data.get('total33T') >= 0 || //! =======> 👀
-                          d33Tcolor1 > data.get('33Tcolor1') && //! =======> 👀
-                              data.get('33Tcolor1') >= 0 || //! =======> 👀
-                          d33Tcolor2 > data.get('33Tcolor2') && //! =======> 👀
-                              data.get('33Tcolor2') >= 0) {
+                    else if (dt1210sp.text.isNotEmpty &&
+                        dc1W1210sp.text.isNotEmpty &&
+                        dc2W1210sp.text.isNotEmpty) {
+                      dtotal1210sp = int.parse(dt1210sp.text);
+                      d1210spcolor1 = int.parse(dc1W1210sp.text);
+                      d1210spcolor2 = int.parse(dc2W1210sp.text);
+                      if (dtotal1210sp >
+                                  data.get('total1210sp') && //! =======> 👀
+                              data.get('total1210sp') >= 0 || //! =======> 👀
+                          d1210spcolor1 >
+                                  data.get('1210spcolor1') && //! =======> 👀
+                              data.get('1210spcolor1') >= 0 || //! =======> 👀
+                          d1210spcolor2 >
+                                  data.get('1210spcolor2') && //! =======> 👀
+                              data.get('1210spcolor2') >= 0) {
                         //! =======> 👀
                         showDialogFunction(
                             'WRONG',
                             'please check on the total Quantity and colors Quantity',
                             'Assets/lottie/Robot.json');
-                        dt33T.clear();
-                        dc1R33T.clear();
-                        dc2R33T.clear();
+                        dt1210sp.clear();
+                        dc1W1210sp.clear();
+                        dc2W1210sp.clear();
                       } else {
-                        dtotal33T = int.parse(dt33T.text);
-                        d33Tcolor1 = int.parse(dc1R33T.text);
-                        d33Tcolor2 = int.parse(dc2R33T.text);
-                        valueDeleteQuantaty33T =
-                            data.get('total33T') - dtotal33T; //! =======> 👀
-                        data.put(
-                            'total33T', valueDeleteQuantaty33T); //! =======> 👀
-                        valueDelete33TColor1 =
-                            data.get('33Tcolor1') - d33Tcolor1; //! =======> 👀
-                        data.put(
-                            '33Tcolor1', valueDelete33TColor1); //! =======> 👀
-                        valueDelete33TColor2 =
-                            data.get('33Tcolor2') - d33Tcolor2; //! =======> 👀
-                        data.put(
-                            '33Tcolor2', valueDelete33TColor2); //! =======> 👀
+                        dtotal1210sp = int.parse(dt1210sp.text);
+                        d1210spcolor1 = int.parse(dc1W1210sp.text);
+                        d1210spcolor2 = int.parse(dc2W1210sp.text);
+                        valueDeleteQuantaty1210sp = data.get('total1210sp') -
+                            dtotal1210sp; //! =======> 👀
+                        data.put('total1210sp',
+                            valueDeleteQuantaty1210sp); //! =======> 👀
+                        valueDelete1210spColor1 = data.get('1210spcolor1') -
+                            d1210spcolor1; //! =======> 👀
+                        data.put('1210spcolor1',
+                            valueDelete1210spColor1); //! =======> 👀
+                        valueDelete1210spColor2 = data.get('1210spcolor2') -
+                            d1210spcolor2; //! =======> 👀
+                        data.put('1210spcolor2',
+                            valueDelete1210spColor2); //! =======> 👀
                         showDialogFunction(
                             'DONE',
                             'success process, and well done for remembering to remove the product',
                             'Assets/lottie/DoneGreen.json');
-                        dt33T.clear();
-                        dc1R33T.clear();
-                        dc2R33T.clear();
+                        dt1210sp.clear();
+                        dc1W1210sp.clear();
+                        dc2W1210sp.clear();
                       }
                     }
 
                     //! ___________ Case Delete From All Qantaty And Color 1 Proccess
-                    else if (dc2R33T.text.isEmpty) {
-                      if (data.get('total33T') > 0 || //! =======> 👀
-                          data.get('33Tcolor1') > 0) {
+                    else if (dc2W1210sp.text.isEmpty) {
+                      if (data.get('total1210sp') > 0 || //! =======> 👀
+                          data.get('1210spcolor1') > 0) {
                         //! =======> 👀
-                        dtotal33T = int.parse(dt33T.text);
-                        d33Tcolor1 = int.parse(dc1R33T.text);
+                        dtotal1210sp = int.parse(dt1210sp.text);
+                        d1210spcolor1 = int.parse(dc1W1210sp.text);
 
-                        if (dtotal33T > data.get('total33T') || //! =======> 👀
-                            d33Tcolor1 > data.get('33Tcolor1')) {
+                        if (dtotal1210sp >
+                                data.get('total1210sp') || //! =======> 👀
+                            d1210spcolor1 > data.get('1210spcolor1')) {
                           //! =======> 👀
                           showDialogFunction(
                               'WRONG',
                               'sorry, the number is greater than the stored quantity,please check on color or total Quantity',
                               'Assets/lottie/Robot.json');
                         } else {
-                          dtotal33T = int.parse(dt33T.text);
-                          d33Tcolor1 = int.parse(dc1R33T.text);
-                          valueDeleteQuantaty33T =
-                              data.get('total33T') - dtotal33T; //! =======> 👀
-                          data.put('total33T',
-                              valueDeleteQuantaty33T); //! =======> 👀
+                          dtotal1210sp = int.parse(dt1210sp.text);
+                          d1210spcolor1 = int.parse(dc1W1210sp.text);
+                          valueDeleteQuantaty1210sp = data.get('total1210sp') -
+                              dtotal1210sp; //! =======> 👀
+                          data.put('total1210s',
+                              valueDeleteQuantaty1210sp); //! =======> 👀
 
-                          valueDelete33TColor1 = data.get('33Tcolor1') -
-                              d33Tcolor1; //! =======> 👀
-                          data.put('33Tcolor1',
-                              valueDelete33TColor1); //! =======> 👀
+                          valueDelete1210spColor1 = data.get('1210spcolor1') -
+                              d1210spcolor1; //! =======> 👀
+                          data.put('1210spcolor1',
+                              valueDelete1210spColor1); //! =======> 👀
 
                           showDialogFunction(
                               'DONE',
@@ -285,40 +295,41 @@ class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
                               'Assets/lottie/DoneGreen.json');
                         }
                       }
-                      dt33T.clear();
-                      dc1R33T.clear();
+                      dt1210sp.clear();
+                      dc1W1210sp.clear();
                     }
 
                     // !_______________ Case All Quantaty delete Proccess And Color 2 __________ //
-                    else if (dc1R33T.text.isEmpty) {
-                      if (data.get('total33T') > 0 || //! =======> 👀
-                          data.get('33Tcolor2') > 0) {
+                    else if (dc1W1210sp.text.isEmpty) {
+                      if (data.get('total1210sp') > 0 || //! =======> 👀
+                          data.get('1210spcolor2') > 0) {
                         //! =======> 👀
-                        dtotal33T = int.parse(dt33T.text);
-                        d33Tcolor2 = int.parse(dc2R33T.text);
+                        dtotal1210sp = int.parse(dt1210sp.text);
+                        d1210spcolor2 = int.parse(dc2W1210sp.text);
                       }
-                      if (dtotal33T > data.get('total33T') || //! =======> 👀
-                          d33Tcolor2 > data.get('33Tcolor2')) {
+                      if (dtotal1210sp >
+                              data.get('total1210sp') || //! =======> 👀
+                          d1210spcolor2 > data.get('1210spcolor2')) {
                         //! =======> 👀
                         showDialogFunction(
                             'WRONG',
                             'sorry, the number is greater than the stored quantity,please check on color or total Quantity',
                             'Assets/lottie/Robot.json');
-                        dt33T.clear();
-                        dc2R33T.clear();
+                        dt1210sp.clear();
+                        dc2W1210sp.clear();
                       } else {
-                        dtotal33T = int.parse(dt33T.text);
-                        d33Tcolor2 = int.parse(dc2R33T.text);
-                        valueDeleteQuantaty33T =
-                            data.get('total33T') - dtotal33T; //! =======> 👀
-                        data.put(
-                            'total33T', valueDeleteQuantaty33T); //! =======> 👀
+                        dtotal1210sp = int.parse(dt1210sp.text);
+                        d1210spcolor2 = int.parse(dc2W1210sp.text);
+                        valueDeleteQuantaty1210sp = data.get('total1210sp') -
+                            dtotal1210sp; //! =======> 👀
+                        data.put('total1210sp',
+                            valueDeleteQuantaty1210sp); //! =======> 👀
                         // dt18.clear();
 
-                        valueDelete33TColor2 =
-                            data.get('33Tcolor2') - d33Tcolor2; //! =======> 👀
-                        data.put(
-                            '33Tcolor2', valueDelete33TColor2); //! =======> 👀
+                        valueDelete1210spColor2 = data.get('1210spcolor2') -
+                            d1210spcolor2; //! =======> 👀
+                        data.put('1210spcolor2',
+                            valueDelete1210spColor2); //! =======> 👀
 
                         //dc2f18.clear();
                         showDialogFunction(
@@ -328,8 +339,8 @@ class _Sell_Toshiba33TState extends State<Sell_Toshiba33T> {
                       }
                     }
 
-                    dt33T.clear();
-                    dc2R33T.clear();
+                    dt1210sp.clear();
+                    dc2W1210sp.clear();
                   });
                 },
                 icon: const Icon(
