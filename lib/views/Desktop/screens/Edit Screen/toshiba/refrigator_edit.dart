@@ -4,10 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Lenovo
+
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_51.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_56.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref37J.dart';
@@ -28,22 +25,6 @@ import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref40pt.dart'
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref45.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_toshiba37.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_tosiba33T.dart';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-import 'package:warehouse/buttomsheet/deep_18.dart';
-import 'package:warehouse/buttomsheet/deep_22.dart';
-import 'package:warehouse/buttomsheet/toshiba33T.dart';
-=======
-import 'package:warehouse/buttomsheet/add_deep18.dart';
-import 'package:warehouse/buttomsheet/add_deep22.dart';
-import 'package:warehouse/buttomsheet/sell_tosiba33T.dart';
-import 'package:warehouse/buttomsheet/add_toshiba33T.dart';
->>>>>>> refs/remotes/origin/main
-=======
->>>>>>> Lenovo
-import 'package:warehouse/custom/custom_add_sell_row.dart';
 
 class RefrigatorToshipaEdit extends StatefulWidget {
   const RefrigatorToshipaEdit({super.key});
