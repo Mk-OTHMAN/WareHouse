@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:warehouse/custom/text_field.dart';
 
-class component_buttom_sheet extends StatelessWidget {
-  late String componentName;
-  TextEditingController textController;
-  component_buttom_sheet(
+class ComponentButtomSheet extends StatelessWidget {
+  final String componentName;
+  final TextEditingController textController;
+  const ComponentButtomSheet(
       {super.key, required this.componentName, required this.textController});
 
   @override

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddSellRow extends StatelessWidget {
-  Widget addShowButtomSheetName;
-  Widget sellShowButtomSheetName;
-  String modelName;
-  IconData iconShape1;
-  IconData iconSape2;
+  final Widget addShowButtomSheetName;
+  final Widget sellShowButtomSheetName;
+  final String modelName;
+  final IconData iconShape1;
+  final IconData iconSape2;
 
-  AddSellRow(
+  const AddSellRow(
       {super.key,
       required this.addShowButtomSheetName,
       required this.sellShowButtomSheetName,
@@ -21,7 +21,7 @@ class AddSellRow extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: 35.w,
+          width: 40.w,
           child: Text(
             modelName,
             style: TextStyle(fontSize: 5.sp, fontWeight: FontWeight.w600),

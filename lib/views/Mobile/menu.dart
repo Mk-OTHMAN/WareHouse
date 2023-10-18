@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:warehouse/views/Mobile/elvated_button.dart';
 import '../../Routes/rutes_name.dart';
 

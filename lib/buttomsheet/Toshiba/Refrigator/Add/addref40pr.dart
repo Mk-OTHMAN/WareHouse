@@ -5,41 +5,41 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/custom/component_bottom_sheet.dart';
 
-class Tosh33t extends StatefulWidget {
-  const Tosh33t({super.key});
+class AddRef40pr extends StatefulWidget {
+  const AddRef40pr({super.key});
 
   @override
-  State<Tosh33t> createState() => _Tosh33tState();
+  State<AddRef40pr> createState() => _AddRef40prState();
 }
 
-class _Tosh33tState extends State<Tosh33t> {
+class _AddRef40prState extends State<AddRef40pr> {
   Box data = Hive.box('data');
   //! variables for calculate proccess to data
-  int valueAddQyantaty33T = 0;
-  int valueAdd33TColor1 = 0;
-  int valueAdd33TColor2 = 0;
+  int valueAddQyantaty40pr = 0;
+  int valueAdd40prColor1 = 0;
+  int valueAdd40prColor2 = 0;
   //! variables for parseing proccess at controller
-  int addtotal33T = 0;
-  int add33Tcolor1 = 0;
-  int add33Tcolor2 = 0;
+  int addtotal40pr = 0;
+  int add40prcolor1 = 0;
+  int add40prcolor2 = 0;
   @override
   Widget build(BuildContext context) {
-    TextEditingController total33T = TextEditingController();
-    TextEditingController r33Tcolor1 = TextEditingController();
-    TextEditingController r33Tcolor2 = TextEditingController();
+    TextEditingController total40pr = TextEditingController();
+    TextEditingController r40prcolor1 = TextEditingController();
+    TextEditingController r40prcolor2 = TextEditingController();
 
-    var t33T = total33T;
-    var c1R33T = r33Tcolor1;
-    var c2R33T = r33Tcolor2;
+    var t40pr = total40pr;
+    var c1R40pr = r40prcolor1;
+    var c2R40pr = r40prcolor2;
 
-    if (data.get('total33T') == null) {
-      data.put('total33T', 0);
+    if (data.get('total40pr') == null) {
+      data.put('total40pr', 0);
     }
-    if (data.get('33Tcolor1') == null) {
-      data.put('33Tcolor1', 0);
+    if (data.get('40prcolor1') == null) {
+      data.put('40prcolor1', 0);
     }
-    if (data.get('33Tcolor2') == null) {
-      data.put('33Tcolor2', 0);
+    if (data.get('40prcolor2') == null) {
+      data.put('40prcolor2', 0);
     }
 
     //! ===================  Function For ShowDialog ===============================
@@ -98,22 +98,22 @@ class _Tosh33tState extends State<Tosh33t> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'Total Quantity',
-                          textController: total33T),
+                          textController: total40pr),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'SL Quantity',
-                          textController: r33Tcolor1),
+                          textController: r40prcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-                      child: component_buttom_sheet(
+                      child: ComponentButtomSheet(
                           componentName: 'CH Quantity',
-                          textController: r33Tcolor2),
+                          textController: r40prcolor2),
                     )
                   ],
                 ),
@@ -126,9 +126,9 @@ class _Tosh33tState extends State<Tosh33t> {
                     onPressed: () {
                       setState(() {
                         //?_______ Check Quantaty & Color 1 & Color is Empty _____ //
-                        if (t33T.text.isEmpty &&
-                            c1R33T.text.isEmpty &&
-                            c2R33T.text.isEmpty) {
+                        if (t40pr.text.isEmpty &&
+                            c1R40pr.text.isEmpty &&
+                            c2R40pr.text.isEmpty) {
                           showDialogFunction(
                               'WRONG',
                               'Please Add Quantity And Color , you must add Quantity and at least one color ..!',
@@ -136,97 +136,101 @@ class _Tosh33tState extends State<Tosh33t> {
                         }
 
                         //? ________ Check if user write in Quantaty Only ________ //
-                        else if (c1R33T.text.isEmpty && c2R33T.text.isEmpty) {
+                        else if (c1R40pr.text.isEmpty && c2R40pr.text.isEmpty) {
                           showDialogFunction(
                               'WRON',
                               'you must choose at least one color.',
                               'Assets/lottie/Error.json');
-                          t33T.clear();
+                          t40pr.clear();
                         }
                         // ?________ Check if user write in Color 1 Only _______ //
-                        else if (t33T.text.isEmpty && c2R33T.text.isEmpty) {
+                        else if (t40pr.text.isEmpty && c2R40pr.text.isEmpty) {
                           showDialogFunction(
                               'WRONG',
                               "you must choose the Quantity,that's wrong add color only",
                               'Assets/lottie/Error.json');
-                          c1R33T.clear();
+                          c1R40pr.clear();
                         }
                         //? ________ check if user write in color 2 only _________ //
-                        else if (t33T.text.isEmpty && c1R33T.text.isEmpty) {
+                        else if (t40pr.text.isEmpty && c1R40pr.text.isEmpty) {
                           showDialogFunction(
                               'WRONG',
                               "you must choose the Quantity, that's wrong add color only",
                               'Assets/lottie/Error.json');
-                          c2R33T.clear();
+                          c2R40pr.clear();
                         }
                         //? _______ check if user write on Color 1 and Color 2 only ______ //
-                        else if (t33T.text.isEmpty) {
+                        else if (t40pr.text.isEmpty) {
                           showDialogFunction(
                               'WRONG',
                               "you must choose the Quantity, that's wrong add color only",
                               'Assets/lottie/Error.json');
-                          c1R33T.clear();
-                          c2R33T.clear();
+                          c1R40pr.clear();
+                          c2R40pr.clear();
                         }
                         //!_________ case add at one time 3*1 _____________
-                        else if (t33T.text.isNotEmpty &&
-                            c1R33T.text.isNotEmpty &&
-                            c2R33T.text.isNotEmpty) {
-                          addtotal33T = int.parse(t33T.text);
-                          add33Tcolor1 = int.parse(c1R33T.text);
-                          add33Tcolor2 = int.parse(c2R33T.text);
-                          if (valueAddQyantaty33T == 0) {
-                            valueAddQyantaty33T =
-                                data.get('total33T'); //! =========> 👀
-                            valueAddQyantaty33T += addtotal33T;
+                        else if (t40pr.text.isNotEmpty &&
+                            c1R40pr.text.isNotEmpty &&
+                            c2R40pr.text.isNotEmpty) {
+                          addtotal40pr = int.parse(t40pr.text);
+                          add40prcolor1 = int.parse(c1R40pr.text);
+                          add40prcolor2 = int.parse(c2R40pr.text);
+                          if (valueAddQyantaty40pr == 0) {
+                            valueAddQyantaty40pr = data
+                                .get('total40pr'); //! =========> 👀  [ TOTAL ]
+                            valueAddQyantaty40pr += addtotal40pr;
                             data.put(
-                                'total33T', valueAddQyantaty33T); //! =====> 👀
+                                'total40pr', //! =====> 👀 [ TOTAL ]
+                                valueAddQyantaty40pr);
                           }
 
-                          if (valueAdd33TColor1 == 0) {
-                            valueAdd33TColor1 =
-                                data.get('33Tcolor1'); //!  ==========> 👀
-                            valueAdd33TColor1 += add33Tcolor1;
+                          if (valueAdd40prColor1 == 0) {
+                            valueAdd40prColor1 = data.get(
+                                '40prcolor1'); //!  ==========> 👀 [COLOR 1]
+                            valueAdd40prColor1 += add40prcolor1;
                             data.put(
-                                '33Tcolor1', //! ========> 👀
-                                valueAdd33TColor1);
+                                '40prcolor1', //! ========> 👀 [ COLOR 1]
+                                valueAdd40prColor1);
                           }
 
-                          if (valueAdd33TColor2 == 0) {
-                            valueAdd33TColor2 =
-                                data.get('33Tcolor2'); // ! =======> 👀
-                            valueAdd33TColor2 += add33Tcolor2;
+                          if (valueAdd40prColor2 == 0) {
+                            valueAdd40prColor2 = data
+                                .get('40prcolor2'); // ! =======> 👀 [ COLOR 2 ]
+                            valueAdd40prColor2 += add40prcolor2;
                             data.put(
-                                '33Tcolor2', valueAdd33TColor2); //! =======>👀
+                                '40prcolor2', //! =======>👀 [ COLOR 2]
+                                valueAdd40prColor2);
                           }
                           showDialogFunction(
                               'DONE',
                               'success process, and well done for remembering to add the product',
                               'Assets/lottie/DoneGreen.json');
-                          total33T.clear();
-                          r33Tcolor1.clear();
-                          r33Tcolor2.clear();
+                          total40pr.clear();
+                          r40prcolor1.clear();
+                          r40prcolor2.clear();
                         }
                         // !_________ Add Proccess for All Quantaty and color 1 _______ //
-                        else if (c2R33T.text.isEmpty) {
-                          addtotal33T = int.parse(t33T.text);
-                          if (valueAddQyantaty33T == 0) {
-                            valueAddQyantaty33T =
-                                data.get('total33T'); //! =========> 👀
+                        else if (c2R40pr.text.isEmpty) {
+                          addtotal40pr = int.parse(t40pr.text);
+                          if (valueAddQyantaty40pr == 0) {
+                            valueAddQyantaty40pr = data
+                                .get('total40pr'); //! =========> 👀 [ TOTAL ]
                           }
-                          valueAddQyantaty33T += addtotal33T;
+                          valueAddQyantaty40pr += addtotal40pr;
                           data.put(
-                              'total33T', valueAddQyantaty33T); //! ======> 👀
-                          add33Tcolor1 = int.parse(c1R33T.text);
-                          if (valueAdd33TColor1 == 0) {
-                            valueAdd33TColor1 =
-                                data.get('33Tcolor1'); //! =======> 👀
+                              'total40pr', //! ======> 👀 [ TOTAL ]
+                              valueAddQyantaty40pr);
+                          add40prcolor1 = int.parse(c1R40pr.text);
+                          if (valueAdd40prColor1 == 0) {
+                            valueAdd40prColor1 = data
+                                .get('40prcolor1'); //! =======> 👀 [ COLOR 1]
                           }
-                          valueAdd33TColor1 += add33Tcolor1;
+                          valueAdd40prColor1 += add40prcolor1;
                           data.put(
-                              '33Tcolor1', valueAdd33TColor1); //! =======> 👀
-                          t33T.clear();
-                          c1R33T.clear();
+                              '40prcolor1', //! =======> 👀 [ COLOR 1]
+                              valueAdd40prColor1);
+                          t40pr.clear();
+                          c1R40pr.clear();
                           Navigator.pop(context);
                           showDialogFunction(
                               'DONE',
@@ -235,24 +239,26 @@ class _Tosh33tState extends State<Tosh33t> {
                         }
                         // !_________ Add Proccess for All Quantaty & Color 2  ________ //
                         else {
-                          addtotal33T = int.parse(t33T.text);
-                          if (valueAddQyantaty33T == 0) {
-                            valueAddQyantaty33T =
-                                data.get('total33T'); //! =======> 👀
+                          addtotal40pr = int.parse(t40pr.text);
+                          if (valueAddQyantaty40pr == 0) {
+                            valueAddQyantaty40pr =
+                                data.get('total40pr'); //! =======> 👀 [TOTAL]
                           }
-                          valueAddQyantaty33T += addtotal33T;
+                          valueAddQyantaty40pr += addtotal40pr;
                           data.put(
-                              'total33T', valueAddQyantaty33T); //! =======> 👀
-                          add33Tcolor2 = int.parse(c2R33T.text);
-                          if (valueAdd33TColor2 == 0) {
-                            valueAdd33TColor2 =
-                                data.get('33Tcolor2'); //! =======> 👀
+                              'total40pr', //! =======> 👀 [TOTAL]
+                              valueAddQyantaty40pr);
+                          add40prcolor2 = int.parse(c2R40pr.text);
+                          if (valueAdd40prColor2 == 0) {
+                            valueAdd40prColor2 = data
+                                .get('40prcolor2'); //! =======> 👀 [COLOR 2]
                           }
-                          valueAdd33TColor2 += add33Tcolor2;
+                          valueAdd40prColor2 += add40prcolor2;
                           data.put(
-                              '33Tcolor2', valueAdd33TColor2); //! =======> 👀
-                          t33T.clear();
-                          c2R33T.clear();
+                              '40prcolor2', //! =======> 👀 [COLOR 2]
+                              valueAdd40prColor2);
+                          t40pr.clear();
+                          c2R40pr.clear();
                           Navigator.pop(context);
                           showDialogFunction(
                               'DONE',

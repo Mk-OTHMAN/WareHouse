@@ -6,8 +6,6 @@ class CustomHeaderTabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double W = MediaQuery.of(context).size.width;
-    double H = MediaQuery.of(context).size.height;
     return Row(
       children: [
         // **************** Model Name Container *******************

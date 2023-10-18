@@ -4,9 +4,33 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
+<<<<<<< HEAD
 import 'package:warehouse/buttomsheet/sell_tosiba33T.dart';
 import 'package:warehouse/buttomsheet/add_toshiba33T.dart';
 import 'package:warehouse/custom/custom_add_sell_row.dart';
+=======
+
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_51.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_56.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref37J.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref40ph.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref40pj.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref40pt.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref45.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_toshiba33T.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_toshiba37.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/addref40pr.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/seel_ref37J.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_51.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_56.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_reef40pj.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref40ph.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref40pr.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref40pt.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref45.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_toshiba37.dart';
+import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_tosiba33T.dart';
+>>>>>>> refs/remotes/origin/main
 
 class RefrigatorToshipaEdit extends StatefulWidget {
   const RefrigatorToshipaEdit({super.key});
@@ -72,83 +96,153 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: Tosh33t(),
+                              sellShowButtomSheetName: SellToshiba33T(),
+                              modelName: 'Toshiba 33 T',
+=======
                           AddSellRow(
                               addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              sellShowButtomSheetName: const SellToshiba33T(),
                               modelName: 'Toshiba33T',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           // _________ sizedBox __________
                           SizedBox(height: 1.h),
                           //! ___________ 37 ____________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef37(),
+                              sellShowButtomSheetName: SellRef37(),
+                              modelName: 'Toshiba 37',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef37(),
+                              sellShowButtomSheetName: const SellRef37(),
                               modelName: 'Toshiba37',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //! _______  37J ____________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef37J(),
+                              sellShowButtomSheetName: SellRef37J(),
+                              modelName: 'Toshiba 37 J',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef37J(),
+                              sellShowButtomSheetName: const SellRef37J(),
                               modelName: 'Toshiba37J',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!     _______ 40PT ________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef40pt(),
+                              sellShowButtomSheetName: SellRef40pt(),
+                              modelName: 'Tosiba 40 PT',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef40pt(),
+                              sellShowButtomSheetName: const SellRef40pt(),
                               modelName: 'Tosiba40PT',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!   __________  40PR ________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef40pr(),
+                              sellShowButtomSheetName: SellRef40pr(),
+                              modelName: 'Toshiba 40 PR',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef40pr(),
+                              sellShowButtomSheetName: const SellRef40pr(),
                               modelName: 'Toshiba40PR',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //! _________  40PJ  __________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef40pj(),
+                              sellShowButtomSheetName: SellRef40pj(),
+                              modelName: 'Toshiba 40P J',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef40pj(),
+                              sellShowButtomSheetName: const SellRef40pj(),
                               modelName: 'Toshiba40PJ',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //! _________  40PH  __________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef40ph(),
+                              sellShowButtomSheetName: SellRef40ph(),
+                              modelName: 'Toshiba 40 PH',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef40ph(),
+                              sellShowButtomSheetName: const SellRef40ph(),
                               modelName: 'Toshiba40PH',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!  __________    45  __________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef45(),
+                              sellShowButtomSheetName: SellRef45(),
+                              modelName: 'Toshiba 45',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef45(),
+                              sellShowButtomSheetName: const SellRef45(),
                               modelName: 'Toshiba45',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!  _______ 51  ______
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef51(),
+                              sellShowButtomSheetName: SellRef51(),
+                              modelName: 'Toshiba 51',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef51(),
+                              sellShowButtomSheetName: const SellRef51(),
                               modelName: 'Toshiba51',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),
                           //!   _________   56  __________
+<<<<<<< HEAD
+                          const AddSellRow(
+                              addShowButtomSheetName: AddRef56(),
+                              sellShowButtomSheetName: SellRef56(),
+                              modelName: 'Toshiba 56',
+=======
                           AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const Sell_Toshiba33T(),
+                              addShowButtomSheetName: const AddRef56(),
+                              sellShowButtomSheetName: const SellRef56(),
                               modelName: 'Toshiba56',
+>>>>>>> Lenovo
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           SizedBox(height: 2.h),

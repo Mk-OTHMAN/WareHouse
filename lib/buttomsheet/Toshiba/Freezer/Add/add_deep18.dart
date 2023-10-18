@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -19,32 +18,15 @@ class _AddDeep18State extends State<AddDeep18> {
   int valueAddQyantatyFreezer18 = 0;
   int valueAddColor1Freezer18 = 0;
   int valueAddColor2Freezer18 = 0;
-
-  //! variables for names data box
-  // String qua = 'total18';
-  // String color1 = '18color1';
-  // String color2 = '18color2';
   //! variables for parseing proccess at controller
   int addtotal18 = 0;
   int addcolor1f18 = 0;
   int addcolor2f18 = 0;
-
-  GlobalKey<FormState> formkey = GlobalKey<FormState>();
-  validat() {
-    var formdata = formkey.currentState!;
-    if (formdata.validate()) {
-      print('valid');
-    } else {
-      print('Not valid');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     TextEditingController qut = TextEditingController();
     TextEditingController color1f18 = TextEditingController();
     TextEditingController color2f18 = TextEditingController();
-
     var t18 = qut;
     var c1f18 = color1f18;
     var c2f18 = color2f18;
@@ -113,18 +95,18 @@ class _AddDeep18State extends State<AddDeep18> {
                 Row(
                   children: [
                     Expanded(
-                        child: component_buttom_sheet(
+                        child: ComponentButtomSheet(
                       componentName: 'Total Quantity',
                       textController: qut,
                     )),
                     //  ########### column color quantaty #########
                     Expanded(
-                        child: component_buttom_sheet(
+                        child: ComponentButtomSheet(
                             componentName: 'SL Quantity',
                             textController: color1f18)),
                     // ############## column color quantaty ########
                     Expanded(
-                        child: component_buttom_sheet(
+                        child: ComponentButtomSheet(
                             componentName: 'CH Quantity',
                             textController: color2f18))
                   ],

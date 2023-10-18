@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-import 'package:warehouse/custom/item_model_data.dart';
-import 'package:warehouse/custom/header_tabel.dart';
+import 'package:warehouse/custom/table/row_data._modelName.dart';
+import 'package:warehouse/custom/table/row_data_keyBoxName.dart';
+import 'package:warehouse/custom/table/table_body.dart';
+import '../../../../custom/table/table_header.dart';
 
 class FreezerScreen extends StatefulWidget {
   const FreezerScreen({super.key});
@@ -41,24 +43,27 @@ class _FreezerScreenState extends State<FreezerScreen> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            const CustomHeaderTabel(),
-
-            ItemModelData(
-                modelName: 'DeepFreezer 22',
-                totalQuantaty: data.get('freezer22Quantaty'),
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: data.get('freezer22color1'),
-                colorTwoQuantaty: data.get('freezer22color2')),
-            // ______ deepfreezer 18 _______
-
-            ItemModelData(
-                modelName: 'DeepFreezer 18',
-                totalQuantaty: data.get('total18'),
-                modelColorOne: 'SL',
-                modelColorTwo: 'CH',
-                colorOneQuantaty: data.get('color1'),
-                colorTwoQuantaty: data.get('color2')),
+            const TableHeader(),
+            //! _________  freezer 18  ___________
+            TableBody(
+                modelName:
+                    const RowDataModelName(componentName: 'Freezer Toshiba 18'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('total18').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('color1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('color2').toString())),
+            //!  ___________ freezer22  ______________
+            TableBody(
+                modelName:
+                    const RowDataModelName(componentName: 'Freezer Toshiba 22'),
+                quantity: RowDataKeyBoxName(
+                    keyBoxName: data.get('freezer22Quantaty').toString()),
+                color1KeyNme: RowDataKeyBoxName(
+                    keyBoxName: data.get('freezer22color1').toString()),
+                color2KeyName: RowDataKeyBoxName(
+                    keyBoxName: data.get('freezer22color2').toString())),
           ],
         ));
   }

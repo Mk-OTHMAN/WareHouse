@@ -78,20 +78,20 @@ class _SellDeep18State extends State<SellDeep18> {
             Row(
               children: [
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'Total Quantity',
                         textController: deletetotal18)),
 
                 //  ########### column color quantaty #########
 
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'SL Quantity',
                         textController: delete18color1)),
 
                 // ############## column coolor quantaty ########
                 Expanded(
-                    child: component_buttom_sheet(
+                    child: ComponentButtomSheet(
                         componentName: 'CH Quantity',
                         textController: delete18color2))
               ],
