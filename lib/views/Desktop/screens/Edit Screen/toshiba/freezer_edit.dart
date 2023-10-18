@@ -7,12 +7,15 @@ import 'package:warehouse/Routes/rutes_name.dart';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 6359593 (create half washer files)
 =======
 >>>>>>> 60bde77 (test)
 =======
+=======
+>>>>>>> 46a122c (edite)
 
 >>>>>>> 58a8622 (edit)
 import 'package:warehouse/buttomsheet/Toshiba/Freezer/Add/add_deep18.dart';
@@ -22,11 +25,14 @@ import 'package:warehouse/buttomsheet/Toshiba/Freezer/Sell/sell_deep22.dart';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 60bde77 (test)
 =======
 
 >>>>>>> 58a8622 (edit)
+=======
+>>>>>>> 46a122c (edite)
 import 'package:warehouse/custom/custom_add_sell_row.dart';
 
 class FreezerToshibaEdit extends StatefulWidget {
