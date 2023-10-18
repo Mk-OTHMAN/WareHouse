@@ -43,10 +43,14 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     //! ===================  Function For ShowDialog ===========================
 =======
     //! ===================  Function For ShowDialog ===============================
 >>>>>>> 6359593 (create half washer files)
+=======
+    //! ===================  Function For ShowDialog ===========================
+>>>>>>> 9bd667c (edit)
     void showDialogFunction(String title, String contetnt, String lottiPath) {
       showDialog(
           context: context,
