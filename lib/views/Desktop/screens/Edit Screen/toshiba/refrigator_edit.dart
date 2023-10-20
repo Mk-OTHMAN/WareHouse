@@ -4,20 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:warehouse/Routes/rutes_name.dart';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 60bde77 (test)
-=======
-=======
->>>>>>> 46a122c (edite)
-
->>>>>>> e19cb02 (create half washer files)
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_51.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_56.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Add/add_ref37J.dart';
@@ -38,14 +25,7 @@ import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref40pt.dart'
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_ref45.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_toshiba37.dart';
 import 'package:warehouse/buttomsheet/Toshiba/Refrigator/Sell/sell_tosiba33T.dart';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import 'package:warehouse/custom/custom_add_sell_row.dart';
-=======
->>>>>>> e19cb02 (create half washer files)
-=======
-import 'package:warehouse/custom/custom_add_sell_row.dart';
->>>>>>> 46a122c (edite)
 
 class RefrigatorToshipaEdit extends StatefulWidget {
   const RefrigatorToshipaEdit({super.key});
@@ -114,31 +94,16 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: Tosh33t(),
                               sellShowButtomSheetName: SellToshiba33T(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const Tosh33t(),
-                              sellShowButtomSheetName: const SellToshiba33T(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba33T',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
                           // _________ sizedBox __________
                           SizedBox(height: 1.h),
                           //! ___________ 37 ____________
+
                           const AddSellRow(
                               addShowButtomSheetName: AddRef37(),
                               sellShowButtomSheetName: SellRef37(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef37(),
-                              sellShowButtomSheetName: const SellRef37(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba37',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -147,14 +112,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef37J(),
                               sellShowButtomSheetName: SellRef37J(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef37J(),
-                              sellShowButtomSheetName: const SellRef37J(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba37J',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -163,14 +120,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40pt(),
                               sellShowButtomSheetName: SellRef40pt(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef40pt(),
-                              sellShowButtomSheetName: const SellRef40pt(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Tosiba40PT',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -179,14 +128,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40pr(),
                               sellShowButtomSheetName: SellRef40pr(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef40pr(),
-                              sellShowButtomSheetName: const SellRef40pr(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba40PR',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -195,14 +136,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40pj(),
                               sellShowButtomSheetName: SellRef40pj(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef40pj(),
-                              sellShowButtomSheetName: const SellRef40pj(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba40PJ',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -211,14 +144,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef40ph(),
                               sellShowButtomSheetName: SellRef40ph(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef40ph(),
-                              sellShowButtomSheetName: const SellRef40ph(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba40PH',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -227,14 +152,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef45(),
                               sellShowButtomSheetName: SellRef45(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef45(),
-                              sellShowButtomSheetName: const SellRef45(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba45',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -243,14 +160,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef51(),
                               sellShowButtomSheetName: SellRef51(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef51(),
-                              sellShowButtomSheetName: const SellRef51(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba51',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),
@@ -259,14 +168,6 @@ class _RefrigatorToshipaEditState extends State<RefrigatorToshipaEdit> {
                           const AddSellRow(
                               addShowButtomSheetName: AddRef56(),
                               sellShowButtomSheetName: SellRef56(),
-<<<<<<< HEAD
-=======
-                          AddSellRow(
-                              addShowButtomSheetName: const AddRef56(),
-                              sellShowButtomSheetName: const SellRef56(),
->>>>>>> 6359593 (create half washer files)
-=======
->>>>>>> 46a122c (edite)
                               modelName: 'Toshiba56',
                               iconShape1: Icons.download,
                               iconSape2: Icons.upload),

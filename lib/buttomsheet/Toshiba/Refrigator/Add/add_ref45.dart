@@ -98,44 +98,23 @@ class _AddRef45State extends State<AddRef45> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'Total Quantity',
                           textController: total45),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'SL Quantity',
                           textController: r45color1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'CH Quantity',
                           textController: r45color2),
                     )

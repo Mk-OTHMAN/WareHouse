@@ -89,41 +89,17 @@ class _SellW1000pState extends State<SellW1000p> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                    child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                         componentName: 'Total Quantity',
                         textController: deletetotal1000p)),
                 //!  ________  sl quantity  ___________
                 Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                    child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                         componentName: 'SL Quantity',
                         textController: delete1000pcolor1)),
                 //! ______________  ch quantity  __________
                 Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                    child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                         componentName: 'CH Quantity',
                         textController: delete1000pcolor2))
               ],

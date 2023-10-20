@@ -98,44 +98,20 @@ class _AddRef40prState extends State<AddRef40pr> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'Total Quantity',
                           textController: total40pr),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'SL Quantity',
                           textController: r40prcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'CH Quantity',
                           textController: r40prcolor2),
                     )

@@ -89,41 +89,17 @@ class _SellRef56State extends State<SellRef56> {
               children: [
                 //! _________    total quantity ________
                 Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                    child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                         componentName: 'Total Quantity',
                         textController: deletetotal56)),
                 //!  ________  sl quantity  ___________
                 Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                    child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                         componentName: 'SL Quantity',
                         textController: delete56color1)),
                 //! ______________  ch quantity  __________
                 Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     child: ComponentButtomSheet(
-=======
-                    child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                    child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                         componentName: 'CH Quantity',
                         textController: delete56color2))
               ],

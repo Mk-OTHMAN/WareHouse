@@ -42,15 +42,9 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
       data.put('1000pcolor2', 0);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    //! ===================  Function For ShowDialog ===========================
-=======
     //! ===================  Function For ShowDialog ===============================
->>>>>>> 6359593 (create half washer files)
-=======
+
     //! ===================  Function For ShowDialog ===========================
->>>>>>> 9bd667c (edit)
     void showDialogFunction(String title, String contetnt, String lottiPath) {
       showDialog(
           context: context,
@@ -79,19 +73,18 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
           });
     }
 
-    return Row(
-      children: [
-        Expanded(
+    return Row(children: [
+      Expanded(
           flex: 2,
           //! -------------------------------------------------------------------
           //? _____________  container for adding proccess ______________________
           //! -------------------------------------------------------------------
           child: Container(
-            decoration: const BoxDecoration(
-                color: Colors.lightGreen,
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(30))),
-            child: Column(
-              children: [
+              decoration: const BoxDecoration(
+                  color: Colors.lightGreen,
+                  borderRadius:
+                      BorderRadius.only(topLeft: Radius.circular(30))),
+              child: Column(children: [
                 SizedBox(
                   height: 10.h,
                 ),
@@ -106,44 +99,20 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
                   children: [
                     //! ____________  total quantity  __________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'Total Quantity',
                           textController: total1000p),
                     ),
                     //! _______________ sl quantity __________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'SL Quantity',
                           textController: w1000pcolor1),
                     ),
 
                     //! _____________ ch quantity  ______________
                     Expanded(
-<<<<<<< HEAD
-<<<<<<< HEAD
                       child: ComponentButtomSheet(
-=======
-                      child: component_buttom_sheet(
->>>>>>> 6359593 (create half washer files)
-=======
-                      child: ComponentButtomSheet(
->>>>>>> 6e95ed1 (some editing)
                           componentName: 'CH Quantity',
                           textController: w1000pcolor2),
                     )
@@ -304,11 +273,7 @@ class _AddWsher1000pState extends State<AddWsher1000p> {
                       Icons.playlist_add_check_circle_outlined,
                       size: 50,
                     ))
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
+              ])))
+    ]);
   }
 }

@@ -6,6 +6,7 @@ import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/custom/table/row_data._modelName.dart';
 import 'package:warehouse/custom/table/row_data_keyBoxName.dart';
 import 'package:warehouse/custom/table/table_body.dart';
+import 'package:warehouse/custom/table_without_color/header.dart';
 import '../../../../custom/table/table_header.dart';
 
 class HalfWasheScreen extends StatefulWidget {
@@ -43,7 +44,7 @@ class _HalfWasheScreenState extends State<HalfWasheScreen> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            const TableHeader(),
+            const TableHeaderNoColor(),
             //! _________  720  ___________
             TableBody(
                 modelName: const RowDataModelName(componentName: 'Toshiba 720'),
