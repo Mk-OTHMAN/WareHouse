@@ -37,7 +37,7 @@ class AddSellRow extends StatelessWidget {
                   builder: (context) {
                     return addShowButtomSheetName;
                   },
-                  shape: const RoundedRectangleBorder( 
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(100),
                         topRight: Radius.circular(100)),
