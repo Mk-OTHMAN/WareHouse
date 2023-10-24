@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TableHeader extends StatelessWidget {
-  const TableHeader({super.key});
+  final String color1, color2;
+  const TableHeader({super.key, required this.color1, required this.color2});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,10 +13,10 @@ class TableHeader extends StatelessWidget {
             defaultVerticalAlignment: TableCellVerticalAlignment.middle,
             children: [
               TableRow(children: [
-                tableHeaderFunction('MODEL NAME', Colors.green),
+                tableHeaderFunction('MODEL NUMBER', Colors.black),
                 tableHeaderFunction('QUANTITY', Colors.red),
-                tableHeaderFunction('COLOR_SL', Colors.black87),
-                tableHeaderFunction('COLOR_CH', Colors.blue),
+                tableHeaderFunction('COLOR_$color1', Colors.blue),
+                tableHeaderFunction('COLOR_$color2', Colors.teal),
               ]),
             ]),
         const Divider(

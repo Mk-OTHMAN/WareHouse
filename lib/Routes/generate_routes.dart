@@ -3,6 +3,7 @@ import 'package:warehouse/Routes/rutes_name.dart';
 import 'package:warehouse/views/Desktop/screens/Edit%20Screen/toshiba/freezer_edit.dart';
 import 'package:warehouse/views/Desktop/screens/Edit%20Screen/toshiba/halfe_wash_edit.dart';
 import 'package:warehouse/views/Desktop/screens/Edit%20Screen/toshiba/refrigator_edit.dart';
+import 'package:warehouse/views/Desktop/screens/Edit%20Screen/toshiba/top_washer_edit.dart';
 import '../views/Desktop/screens/common factor/freezer.dart';
 import '../views/Desktop/screens/common factor/halfe_washe.dart';
 import '../views/Desktop/screens/common factor/refrigerator.dart';
@@ -53,6 +54,9 @@ class RutesManager {
             builder: (ctx) => const RefrigatorToshipaEdit());
       case Routes.halfeWasheToshibaEdit:
         return MaterialPageRoute(builder: (ctx) => const HalfWasheEdit());
+      case Routes.topWasheToshibaEdit:
+        return MaterialPageRoute(
+            builder: (ctx) => const TopWasherToshibaEdit());
     }
     return MaterialPageRoute(builder: (ctx) => const MenuScreen());
   }

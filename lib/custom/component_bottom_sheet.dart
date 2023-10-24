@@ -23,7 +23,7 @@ class ComponentButtomSheet extends StatelessWidget {
         //  ______tetxt form field  ______ //
         SizedBox(
             // height: 50,
-            width: 33.w,
+            width: 28.w,
             child: CustomTextField(textEditingController: textController)),
       ],
     );

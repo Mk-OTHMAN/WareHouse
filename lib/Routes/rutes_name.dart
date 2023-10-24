@@ -15,4 +15,5 @@ class Routes {
   static const refrigatorToshipaEdit = '/RTedit';
   static const toshibaMaobile = 'tosibaMobile';
   static const halfeWasheToshibaEdit = '/halfeWasheToshibaEdit';
+  static const topWasheToshibaEdit = '/topWasheToshibaEdit';
 }

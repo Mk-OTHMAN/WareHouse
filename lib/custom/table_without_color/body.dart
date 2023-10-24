@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class TableBodNoColor extends StatelessWidget {
+class TableBodyNoColor extends StatelessWidget {
   final Widget modelName, quantity;
-  const TableBodNoColor({
+  const TableBodyNoColor({
     super.key,
     required this.modelName,
     required this.quantity,

@@ -43,7 +43,10 @@ class _FreezerScreenState extends State<FreezerScreen> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            const TableHeader(),
+            const TableHeader(
+              color1: 'SL',
+              color2: 'CH',
+            ),
             //! _________  freezer 18  ___________
             TableBody(
                 modelName:

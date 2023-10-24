@@ -44,7 +44,10 @@ class _RefrigeratorScreenState extends State<RefrigeratorScreen> {
         backgroundColor: Colors.white,
         body: ListView(
           children: [
-            const TableHeader(),
+            const TableHeader(
+              color1: 'SL',
+              color2: 'CH',
+            ),
             //! ______  ref 33T  _____
             TableBody(
                 modelName: const RowDataModelName(componentName: 'Toshiba 33T'),
